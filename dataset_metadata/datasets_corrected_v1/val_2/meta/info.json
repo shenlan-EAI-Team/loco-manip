@@ -1,0 +1,171 @@
+{
+  "codebase_version": "v2.1",
+  "robot_type": "unitree_g1_o6_upper_body",
+  "total_episodes": 2,
+  "total_frames": 1197,
+  "total_tasks": 1,
+  "total_videos": 2,
+  "total_chunks": 1,
+  "chunks_size": 1000,
+  "fps": 30,
+  "splits": {
+    "train": "0:2"
+  },
+  "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+  "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+  "features": {
+    "observation.images.ego_view": {
+      "dtype": "video",
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "names": [
+        "height",
+        "width",
+        "channel"
+      ],
+      "info": {
+        "video.height": 480,
+        "video.width": 640,
+        "video.codec": "h264",
+        "video.pix_fmt": "yuv420p",
+        "video.is_depth_map": false,
+        "video.fps": 30,
+        "video.channels": 3,
+        "has_audio": false
+      }
+    },
+    "observation.state": {
+      "dtype": "float32",
+      "shape": [
+        32
+      ],
+      "names": [
+        "left_shoulder_pitch_joint",
+        "left_shoulder_roll_joint",
+        "left_shoulder_yaw_joint",
+        "left_elbow_joint",
+        "left_wrist_roll_joint",
+        "left_wrist_pitch_joint",
+        "left_wrist_yaw_joint",
+        "right_shoulder_pitch_joint",
+        "right_shoulder_roll_joint",
+        "right_shoulder_yaw_joint",
+        "right_elbow_joint",
+        "right_wrist_roll_joint",
+        "right_wrist_pitch_joint",
+        "right_wrist_yaw_joint",
+        "left_o6_thumb_cmc_pitch",
+        "left_o6_thumb_cmc_yaw",
+        "left_o6_index_mcp_pitch",
+        "left_o6_middle_mcp_pitch",
+        "left_o6_ring_mcp_pitch",
+        "left_o6_pinky_mcp_pitch",
+        "right_o6_thumb_cmc_pitch",
+        "right_o6_thumb_cmc_yaw",
+        "right_o6_index_mcp_pitch",
+        "right_o6_middle_mcp_pitch",
+        "right_o6_ring_mcp_pitch",
+        "right_o6_pinky_mcp_pitch",
+        "waist_yaw",
+        "waist_roll",
+        "waist_pitch",
+        "projected_gravity_x",
+        "projected_gravity_y",
+        "projected_gravity_z"
+      ]
+    },
+    "action": {
+      "dtype": "float32",
+      "shape": [
+        26
+      ],
+      "names": [
+        "left_shoulder_pitch_target",
+        "left_shoulder_roll_target",
+        "left_shoulder_yaw_target",
+        "left_elbow_target",
+        "left_wrist_roll_target",
+        "left_wrist_pitch_target",
+        "left_wrist_yaw_target",
+        "right_shoulder_pitch_target",
+        "right_shoulder_roll_target",
+        "right_shoulder_yaw_target",
+        "right_elbow_target",
+        "right_wrist_roll_target",
+        "right_wrist_pitch_target",
+        "right_wrist_yaw_target",
+        "left_o6_thumb_cmc_pitch_target_pct",
+        "left_o6_thumb_cmc_yaw_target_pct",
+        "left_o6_index_mcp_pitch_target_pct",
+        "left_o6_middle_mcp_pitch_target_pct",
+        "left_o6_ring_mcp_pitch_target_pct",
+        "left_o6_pinky_mcp_pitch_target_pct",
+        "right_o6_thumb_cmc_pitch_target_pct",
+        "right_o6_thumb_cmc_yaw_target_pct",
+        "right_o6_index_mcp_pitch_target_pct",
+        "right_o6_middle_mcp_pitch_target_pct",
+        "right_o6_ring_mcp_pitch_target_pct",
+        "right_o6_pinky_mcp_pitch_target_pct"
+      ]
+    },
+    "timestamp": {
+      "dtype": "float32",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "frame_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "episode_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "task_index": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "annotation.human.task_description": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "next.reward": {
+      "dtype": "float32",
+      "shape": [
+        1
+      ],
+      "names": null
+    },
+    "next.done": {
+      "dtype": "bool",
+      "shape": [
+        1
+      ],
+      "names": null
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "subset": "test_2",
+  "source_dataset": "/home/slxy/g1_data/g1_wuji_pilot_20260803_170036",
+  "source_opened_read_only": true,
+  "source_to_local_episode": [
+    {
+      "source_episode": 28,
+      "local_episode": 0,
+      "frames": 595
+    },
+    {
+      "source_episode": 29,
+      "local_episode": 1,
+      "frames": 604
+    }
+  ],
+  "state_dim": 32,
+  "action_dim": 26,
+  "g1_source_transport_contract": "g1_debug body_q and last_action are already hardware/MuJoCo ordered absolute radians; no second reorder, default-angle offset, or action scaling is applied",
+  "arm_state_storage": "absolute hardware joint feedback in rad",
+  "arm_action_storage": "absolute hardware joint target in rad; N1.7 config converts to relative",
+  "o6_action_storage": "absolute SDK percentage target, 0..100"
+}

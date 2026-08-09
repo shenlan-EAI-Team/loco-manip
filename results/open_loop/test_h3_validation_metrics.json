@@ -1,0 +1,128 @@
+{
+  "checkpoint": "/home/slxy/下载/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000",
+  "dataset": "/home/slxy/下载/g1_o6_gr00t/datasets_corrected_v1/test_2",
+  "execution_horizon": 3,
+  "denoising_steps": 4,
+  "seed": 42,
+  "episodes": [
+    {
+      "local_episode": 0,
+      "frames": 595,
+      "modalities": {
+        "left_arm": {
+          "frames": 595,
+          "dimensions": 7,
+          "mse": 0.004468628362716449,
+          "rmse": 0.06684779998411652,
+          "mae": 0.04765374269936357,
+          "max_abs_error": 0.6353381276130676
+        },
+        "right_arm": {
+          "frames": 595,
+          "dimensions": 7,
+          "mse": 0.001007164186354196,
+          "rmse": 0.03173585017538046,
+          "mae": 0.024625797396497038,
+          "max_abs_error": 0.1532553881406784
+        },
+        "left_o6": {
+          "frames": 595,
+          "dimensions": 6,
+          "mse": 405.0518774123005,
+          "rmse": 20.125900660897155,
+          "mae": 7.623920754349532,
+          "max_abs_error": 100.0
+        },
+        "right_o6": {
+          "frames": 595,
+          "dimensions": 6,
+          "mse": 0.0,
+          "rmse": 0.0,
+          "mae": 0.0,
+          "max_abs_error": 0.0
+        }
+      }
+    },
+    {
+      "local_episode": 1,
+      "frames": 604,
+      "modalities": {
+        "left_arm": {
+          "frames": 604,
+          "dimensions": 7,
+          "mse": 0.0046314092255370825,
+          "rmse": 0.06805445779327819,
+          "mae": 0.04933121170002587,
+          "max_abs_error": 0.5297621488571167
+        },
+        "right_arm": {
+          "frames": 604,
+          "dimensions": 7,
+          "mse": 0.0012078949854080142,
+          "rmse": 0.034754783633451296,
+          "mae": 0.026008638917671436,
+          "max_abs_error": 0.20512714982032776
+        },
+        "left_o6": {
+          "frames": 604,
+          "dimensions": 6,
+          "mse": 167.21331998595855,
+          "rmse": 12.931098947342354,
+          "mae": 3.6349905816546206,
+          "max_abs_error": 100.0
+        },
+        "right_o6": {
+          "frames": 604,
+          "dimensions": 6,
+          "mse": 0.0,
+          "rmse": 0.0,
+          "mae": 0.0,
+          "max_abs_error": 0.0
+        }
+      }
+    }
+  ],
+  "aggregate_by_modality": {
+    "left_arm": {
+      "frames": 1199,
+      "dimensions": 7,
+      "mse": 0.004550629731476802,
+      "rmse": 0.06745835553492838,
+      "mae": 0.04849877295490988,
+      "max_abs_error": 0.6353381276130676
+    },
+    "right_arm": {
+      "frames": 1199,
+      "dimensions": 7,
+      "mse": 0.0011082829541844764,
+      "rmse": 0.033290883950181864,
+      "mae": 0.025322408137772548,
+      "max_abs_error": 0.20512714982032776
+    },
+    "left_o6": {
+      "frames": 1199,
+      "dimensions": 6,
+      "mse": 285.239960243401,
+      "rmse": 16.88904852984327,
+      "mae": 5.614484704051178,
+      "max_abs_error": 100.0
+    },
+    "right_o6": {
+      "frames": 1199,
+      "dimensions": 6,
+      "mse": 0.0,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs_error": 0.0
+    }
+  },
+  "aggregate_all_raw_units": {
+    "frames": 1199,
+    "dimensions": 26,
+    "mse": 65.82612976343098,
+    "rmse": 8.113330374354971,
+    "mae": 1.3155252496906094,
+    "max_abs_error": 100.0
+  },
+  "warning": "Raw-unit aggregate mixes arm radians and O6 percentages; compare per modality."
+}

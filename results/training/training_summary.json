@@ -1,0 +1,27 @@
+{
+  "trainer_state": "/home/slxy/\u4e0b\u8f7d/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000/trainer_state.json",
+  "global_step": 3000,
+  "max_steps": 3000,
+  "logged_records": 300,
+  "logging_interval_steps": 10,
+  "loss": {
+    "first": 1.2356,
+    "last": 0.0434,
+    "mean_first_100_steps": 1.09368,
+    "mean_last_100_steps": 0.04368,
+    "minimum": 0.0359,
+    "minimum_step": 2750,
+    "maximum": 1.2356,
+    "all_finite": true
+  },
+  "gradient_norm": {
+    "median": 0.5353488028049469,
+    "maximum": 1.3661422729492188,
+    "last": 0.32358524203300476,
+    "all_finite": true
+  },
+  "learning_rate": {
+    "maximum": 9.999753945398704e-05,
+    "last": 3.037735734623404e-11
+  }
+}
