@@ -1,0 +1,26 @@
+{
+  "gate_passed": true,
+  "file": "/home/slxy/下载/g1_o6_gr00t/deployment/remote_readers/o6_feedback_only_relay.py",
+  "assertions": {
+    "no_control_setter_calls": true,
+    "no_command_zmq_socket": true,
+    "state_pub_only": true,
+    "can_must_already_be_up": true,
+    "command_counter_literal_zero": true
+  },
+  "findings": [],
+  "allowed_feedback_calls": [
+    {
+      "line": 75,
+      "method": "get_serial_number"
+    },
+    {
+      "line": 77,
+      "method": "get_serial_number"
+    },
+    {
+      "line": 111,
+      "method": "get_state"
+    }
+  ]
+}

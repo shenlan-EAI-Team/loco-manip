@@ -1,0 +1,135 @@
+{
+  "test_dataset": "/home/slxy/下载/g1_o6_gr00t/datasets/test_2",
+  "runs": {
+    "denoising_4": {
+      "denoising_steps": 4,
+      "warmup_iterations": 10,
+      "measured_iterations": 100,
+      "data_read": {
+        "mean_ms": 0.24609910789877176,
+        "p50_ms": 0.2434905618429184,
+        "p90_ms": 0.2582749701105058,
+        "p99_ms": 0.3274127782788129,
+        "max_ms": 0.34561497159302235
+      },
+      "observation_dict_construction": {
+        "mean_ms": 0.15423337346874177,
+        "p50_ms": 0.08025096030905843,
+        "p90_ms": 0.26240088045597076,
+        "p99_ms": 0.2747447194997221,
+        "max_ms": 0.2773859305307269
+      },
+      "processor_preprocessing_including_image": {
+        "mean_ms": 2.6768845808692276,
+        "p50_ms": 2.653105999343097,
+        "p90_ms": 2.7771146968007088,
+        "p99_ms": 2.914015124551952,
+        "max_ms": 2.948087058030069
+      },
+      "model_forward": {
+        "mean_ms": 49.95598305831663,
+        "p50_ms": 49.74203399615362,
+        "p90_ms": 51.11624323762953,
+        "p99_ms": 52.47955952421763,
+        "max_ms": 53.49089694209397
+      },
+      "action_postprocessing": {
+        "mean_ms": 0.30562966829165816,
+        "p50_ms": 0.3038920694962144,
+        "p90_ms": 0.3273960552178323,
+        "p99_ms": 0.34182669827714574,
+        "max_ms": 0.35882601514458656
+      },
+      "policy_get_action": {
+        "mean_ms": 53.21639955509454,
+        "p50_ms": 52.52754903631285,
+        "p90_ms": 54.900355206336826,
+        "p99_ms": 63.02282424643642,
+        "max_ms": 75.08589990902692
+      },
+      "complete_local_e2e": {
+        "mean_ms": 53.616732036462054,
+        "p50_ms": 52.9153025127016,
+        "p90_ms": 55.44572577346116,
+        "p99_ms": 63.51166487322195,
+        "max_ms": 75.5789588438347
+      },
+      "gpu_peak_allocated_mib": 6077.1572265625,
+      "gpu_peak_reserved_mib": 6174.0,
+      "theoretical_sustainable_hz_from_mean": 18.650894264125423,
+      "scope_warning": "Offline local cached replay only; excludes camera, G1 network, SDK, synchronization, and actuator latency."
+    },
+    "denoising_8": {
+      "denoising_steps": 8,
+      "warmup_iterations": 10,
+      "measured_iterations": 100,
+      "data_read": {
+        "mean_ms": 0.24620800162665546,
+        "p50_ms": 0.24380144895985723,
+        "p90_ms": 0.2563713933341205,
+        "p99_ms": 0.32325063832104217,
+        "max_ms": 0.341931008733809
+      },
+      "observation_dict_construction": {
+        "mean_ms": 0.07457496249116957,
+        "p50_ms": 0.0738359522074461,
+        "p90_ms": 0.07888817926868796,
+        "p99_ms": 0.08149661123752595,
+        "max_ms": 0.08283997885882854
+      },
+      "processor_preprocessing_including_image": {
+        "mean_ms": 2.718623881228268,
+        "p50_ms": 2.7084965258836746,
+        "p90_ms": 2.7918646694161,
+        "p99_ms": 2.854036958888175,
+        "max_ms": 3.1884589698165655
+      },
+      "model_forward": {
+        "mean_ms": 78.16931677283719,
+        "p50_ms": 78.00582551863045,
+        "p90_ms": 79.48803465114906,
+        "p99_ms": 83.11228530365042,
+        "max_ms": 83.80255394149572
+      },
+      "action_postprocessing": {
+        "mean_ms": 0.32413035398349166,
+        "p50_ms": 0.3237894852645695,
+        "p90_ms": 0.34800858702510595,
+        "p99_ms": 0.3746557398699225,
+        "max_ms": 0.400971039198339
+      },
+      "policy_get_action": {
+        "mean_ms": 81.51271111448295,
+        "p50_ms": 80.8765385299921,
+        "p90_ms": 83.78106626914814,
+        "p99_ms": 88.33074546419085,
+        "max_ms": 90.04439203999937
+      },
+      "complete_local_e2e": {
+        "mean_ms": 81.83349407860078,
+        "p50_ms": 81.1917309765704,
+        "p90_ms": 84.09695635782555,
+        "p99_ms": 88.63716558669695,
+        "max_ms": 90.35359905101359
+      },
+      "gpu_peak_allocated_mib": 6077.1572265625,
+      "gpu_peak_reserved_mib": 6174.0,
+      "theoretical_sustainable_hz_from_mean": 12.219935263176023,
+      "scope_warning": "Offline local cached replay only; excludes camera, G1 network, SDK, synchronization, and actuator latency."
+    }
+  },
+  "candidate_schedules": {
+    "10_hz": {
+      "execution_horizon": 3,
+      "period_ms": 100.0
+    },
+    "7_5_hz": {
+      "execution_horizon": 4,
+      "period_ms": 133.333333
+    },
+    "5_hz": {
+      "execution_horizon": 6,
+      "period_ms": 200.0
+    }
+  }
+}

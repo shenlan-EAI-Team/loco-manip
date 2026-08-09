@@ -1,0 +1,22 @@
+{
+  "gate_passed": true,
+  "files": [
+    "/home/slxy/下载/g1_o6_gr00t/deployment/run_live_shadow.py",
+    "/home/slxy/下载/g1_o6_gr00t/deployment/null_sink.py",
+    "/home/slxy/下载/g1_o6_gr00t/deployment/observation_sources/g1_live.py",
+    "/home/slxy/下载/g1_o6_gr00t/deployment/observation_sources/g1_lowstate_stdout.py"
+  ],
+  "assertions": {
+    "runner_never_calls_adapter_drain_to_mock": true,
+    "runner_never_calls_emergency_stop": true,
+    "runner_uses_null_sink": true,
+    "lowstate_subscriber_only": true,
+    "no_static_banned_findings": true
+  },
+  "findings": [],
+  "runtime_required_counters": {
+    "command_publish_attempts": 0,
+    "control_ownership_requests": 0,
+    "real_sdk_objects_created": 0
+  }
+}

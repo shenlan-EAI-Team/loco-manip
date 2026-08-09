@@ -1,0 +1,38 @@
+real_hardware_enabled: false
+publish_commands: false
+shadow_only: true
+dry_run: true
+
+g1_host: 192.168.123.164
+g1_wired_interface: enp4s0
+camera_endpoint: tcp://192.168.123.164:5555
+camera_serial: "342522073568"
+g1_feedback_interface: "DDS SUB rt/lowstate (unitree_hg LowState_)"
+waist_feedback_interface: "LowState.motor_state indices 12,13,14"
+imu_interface: "LowState.imu_state.quaternion wxyz"
+left_o6_feedback_interface: "ZMQ SUB tcp://192.168.123.164:5558 schema v2 left.actual_q"
+right_o6_feedback_interface: "ZMQ SUB tcp://192.168.123.164:5558 schema v2 right.actual_q"
+
+unitree_reader_python: /home/slxy/miniconda3/envs/g1/bin/python
+unitree_lowstate_topic: rt/lowstate
+o6_state_port: 5558
+task_prompt: Pick up the green cylinder from the table using the left O6 hand and place it into the white bin.
+
+denoising_steps: 4
+replanning_hz: 10.0
+execution_horizon: 3
+control_timeline_hz: 30.0
+null_sink_hz: 100.0
+warmup_inferences: 10
+warmup_timeout_s: 30
+
+timestamp_tolerance_ms: 20
+camera_stale_timeout_ms: 100
+g1_stale_timeout_ms: 50
+o6_stale_timeout_ms: 200
+require_left_o6: true
+require_right_o6: true
+
+startup_timeout_s: 20
+command_publish_attempt_limit: 0
+control_ownership_request_limit: 0

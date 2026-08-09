@@ -1,0 +1,161 @@
+{
+  "mode": "DRY RUN: MOCK SDKS ONLY; NO COMMANDS SENT",
+  "dataset": "/home/slxy/下载/g1_o6_gr00t/datasets/test_2",
+  "checkpoint": "/home/slxy/下载/g1_o6_gr00t/outputs/formal_train_26/checkpoint-4000",
+  "pipeline": "Policy API -> Action Adapter -> Safety Filter -> Action Buffer -> Mock SDK",
+  "per_group": {
+    "left_arm": {
+      "policy_api": {
+        "max_abs_velocity": 47.74727249145508,
+        "p95_abs_velocity": 25.67739238739013,
+        "max_abs_acceleration": 2802.5810546875,
+        "p95_abs_acceleration": 1316.2388183593746
+      },
+      "adapter": {
+        "max_abs_velocity": 0.8000028133392334,
+        "p95_abs_velocity": 0.6333330273628235,
+        "max_abs_acceleration": 3.0001044273376465,
+        "p95_abs_acceleration": 3.0000104904174805
+      },
+      "max_chunk_boundary_jump_before": 1.5915757417678833,
+      "max_chunk_boundary_jump_after": 0.026666700839996338
+    },
+    "right_arm": {
+      "policy_api": {
+        "max_abs_velocity": 41.673919677734375,
+        "p95_abs_velocity": 23.98821983337402,
+        "max_abs_acceleration": 2490.166748046875,
+        "p95_abs_acceleration": 1229.9920898437497
+      },
+      "adapter": {
+        "max_abs_velocity": 0.8000010251998901,
+        "p95_abs_velocity": 0.699999988079071,
+        "max_abs_acceleration": 3.0000507831573486,
+        "p95_abs_acceleration": 3.0000104904174805
+      },
+      "max_chunk_boundary_jump_before": 1.3777213096618652,
+      "max_chunk_boundary_jump_after": 0.026666700839996338
+    },
+    "left_o6": {
+      "policy_api": {
+        "max_abs_velocity": 3000.0,
+        "p95_abs_velocity": 2367.1875,
+        "max_abs_acceleration": 180000.0,
+        "p95_abs_acceleration": 115829.08828124999
+      },
+      "adapter": {
+        "max_abs_velocity": 240.0001220703125,
+        "p95_abs_velocity": 166.78939819335938,
+        "max_abs_acceleration": 1200.0091552734375,
+        "p95_abs_acceleration": 1200.0091552734375
+      },
+      "max_chunk_boundary_jump_before": 100.0,
+      "max_chunk_boundary_jump_after": 8.000003814697266
+    },
+    "right_o6": {
+      "policy_api": {
+        "max_abs_velocity": 0.0,
+        "p95_abs_velocity": 0.0,
+        "max_abs_acceleration": 0.0,
+        "p95_abs_acceleration": 0.0
+      },
+      "adapter": {
+        "max_abs_velocity": 0.0,
+        "p95_abs_velocity": 0.0,
+        "max_abs_acceleration": 0.0,
+        "p95_abs_acceleration": 0.0
+      },
+      "max_chunk_boundary_jump_before": 0.0,
+      "max_chunk_boundary_jump_after": 0.0
+    }
+  },
+  "adapter_metrics": {
+    "dry_run": true,
+    "real_hardware_enabled": false,
+    "filter_counters": {
+      "left_arm": {
+        "nonfinite": 0,
+        "position_limit": 0,
+        "velocity_limit": 7393,
+        "acceleration_limit": 7697,
+        "o6_delta_limit": 0
+      },
+      "right_arm": {
+        "nonfinite": 0,
+        "position_limit": 0,
+        "velocity_limit": 7758,
+        "acceleration_limit": 7746,
+        "o6_delta_limit": 0
+      },
+      "left_o6": {
+        "nonfinite": 0,
+        "position_limit": 0,
+        "velocity_limit": 2641,
+        "acceleration_limit": 6081,
+        "o6_delta_limit": 4929
+      },
+      "right_o6": {
+        "nonfinite": 0,
+        "position_limit": 0,
+        "velocity_limit": 0,
+        "acceleration_limit": 0,
+        "o6_delta_limit": 0
+      }
+    },
+    "buffer_underruns": 0,
+    "watchdog_holds": 0,
+    "sdk_errors": [],
+    "mock_g1_records": 4010,
+    "mock_o6_records": 4010
+  },
+  "fault_tests": {
+    "nan_injection_filtered_to_finite": true,
+    "timeout_recorded_and_hold": true,
+    "network_disconnect_recorded_and_hold": true,
+    "watchdog_holds_last_safe_target": true,
+    "emergency_stop_holds_last_safe_target": true,
+    "empty_buffer_underrun_recorded": true,
+    "fault_adapter_metrics": {
+      "dry_run": true,
+      "real_hardware_enabled": false,
+      "filter_counters": {
+        "left_arm": {
+          "nonfinite": 1,
+          "position_limit": 0,
+          "velocity_limit": 0,
+          "acceleration_limit": 0,
+          "o6_delta_limit": 0
+        },
+        "right_arm": {
+          "nonfinite": 0,
+          "position_limit": 0,
+          "velocity_limit": 0,
+          "acceleration_limit": 0,
+          "o6_delta_limit": 0
+        },
+        "left_o6": {
+          "nonfinite": 0,
+          "position_limit": 0,
+          "velocity_limit": 0,
+          "acceleration_limit": 0,
+          "o6_delta_limit": 0
+        },
+        "right_o6": {
+          "nonfinite": 0,
+          "position_limit": 0,
+          "velocity_limit": 0,
+          "acceleration_limit": 0,
+          "o6_delta_limit": 0
+        }
+      },
+      "buffer_underruns": 1,
+      "watchdog_holds": 4,
+      "sdk_errors": [
+        "mock G1 timeout",
+        "mock O6 network disconnected"
+      ],
+      "mock_g1_records": 11,
+      "mock_o6_records": 10
+    }
+  }
+}

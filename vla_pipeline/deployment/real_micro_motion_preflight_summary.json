@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "READY_WAITING_FOR_USER_CONFIRMATION",
+  "real_commands_sent": 0,
+  "confirmation_token": null,
+  "arm_o6_fully_decoupled": true,
+  "tests": {
+    "focused_passed": 28,
+    "static_audit_passed": true,
+    "wall_clock_mock": "PASS",
+    "wall_clock_s": 24.160951965022832
+  },
+  "setter_block_100ms": {
+    "arm_interval_ms": {
+      "mean": 20.058428254401818,
+      "p95": 20.06260857451707,
+      "p99": 20.108423663768917,
+      "max": 20.368008059449494,
+      "min": 20.01396904233843
+    },
+    "right_o6_command_count": 0
+  },
+  "setter_timeout": {
+    "micro_error": "RuntimeError: O6 feedback monitor failed: TimeoutError: injected O6 setter timeout",
+    "release_messages": 100,
+    "final_weight": 0.0,
+    "release_error": null,
+    "post_release_samples": 25
+  },
+  "new_plan": {
+    "path": "deployment/logs/real_bridge_preflight_corrected/20260807_163021_micro_decoupled/model_micro_motion_plan.json",
+    "sha256": "c262f7f66cc62f0b851de72c1fdc8a088445560526989f7cbaf5d33c9652b96d",
+    "checkpoint_manifest_sha256": "e040f2802954b94eaedd071d73685dbaf416efece2b4fb06e0695aa2f609e012",
+    "left_arm_delta_rad": {
+      "max_abs": 0.010000000000000009,
+      "per_dim_max_abs": [
+        0.010000000000000002,
+        0.009999999999999995,
+        0.010000000000000002,
+        0.010000000000000009,
+        0.01,
+        0.010000000000000009,
+        0.010000000000000009
+      ],
+      "last": [
+        -0.010000000000000002,
+        0.009999999999999995,
+        0.010000000000000002,
+        -0.010000000000000009,
+        -0.01,
+        -0.010000000000000009,
+        0.010000000000000009
+      ]
+    },
+    "right_arm_delta_rad": {
+      "max_abs": 0.010000000000000009,
+      "per_dim_max_abs": [
+        0.009999999999999995,
+        0.010000000000000002,
+        0.009999999999999995,
+        0.010000000000000009,
+        0.010000000000000002,
+        0.010000000000000002,
+        0.009999999999999995
+      ],
+      "last": [
+        -0.009999999999999995,
+        -0.010000000000000002,
+        -0.009999999999999995,
+        -0.010000000000000009,
+        0.010000000000000002,
+        0.005679999999999991,
+        -0.006543069863318998
+      ]
+    },
+    "left_o6_delta_points": {
+      "max_abs": 5.0,
+      "per_dim_max_abs": [
+        2.370443845262713,
+        5.0,
+        0.39215686274509665,
+        0.5844056372549034,
+        0.39215686274509665,
+        0.39215686274509665
+      ],
+      "last": [
+        -1.632981992235372,
+        -5.0,
+        0.39215686274509665,
+        0.3906996483896279,
+        0.39215686274509665,
+        0.39215686274509665
+      ]
+    },
+    "right_o6_feedback_only": true,
+    "right_o6_command_count": 0,
+    "scheduler_contract": {
+      "arm_publish_hz": 50.0,
+      "arm_loop_direct_o6_getter_calls": 0,
+      "arm_loop_direct_o6_setter_calls": 0,
+      "o6_io_owner": "o6-independent-io-worker",
+      "o6_target_queue": "latest-only",
+      "catch_up_bursts_allowed": false,
+      "o6_failure_blocks_arm_release": false,
+      "release_feedback_dependency": "G1-only; O6 cache is optional metadata"
+    }
+  },
+  "ready_for_first_real_0p5s_micro_motion": true,
+  "requires_new_user_confirmation": true
+}

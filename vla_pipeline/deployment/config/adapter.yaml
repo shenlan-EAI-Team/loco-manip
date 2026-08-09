@@ -1,0 +1,46 @@
+dry_run: true
+real_hardware_enabled: false
+control_timeline_hz: 30
+sdk_publish_hz: 100
+execution_horizon: 3
+watchdog_timeout_s: 0.25
+right_o6_feedback_only: true
+
+# G1 29-DoF URDF limits, in policy arm joint order.
+left_arm:
+  lower: [-3.0892, -1.5882, -2.618, -1.0472, -1.972222054, -1.614429558, -1.614429558]
+  upper: [ 2.6704,  2.2515,  2.618,  2.0944,  1.972222054,  1.614429558,  1.614429558]
+  max_velocity: [0.6, 0.6, 0.6, 0.7, 0.8, 0.8, 0.8]
+  max_acceleration: [2.0, 2.0, 2.0, 2.5, 3.0, 3.0, 3.0]
+right_arm:
+  lower: [-3.0892, -2.2515, -2.618, -1.0472, -1.972222054, -1.614429558, -1.614429558]
+  upper: [ 2.6704,  1.5882,  2.618,  2.0944,  1.972222054,  1.614429558,  1.614429558]
+  max_velocity: [0.6, 0.6, 0.6, 0.7, 0.8, 0.8, 0.8]
+  max_acceleration: [2.0, 2.0, 2.0, 2.5, 3.0, 3.0, 3.0]
+left_o6:
+  lower: [0, 0, 0, 0, 0, 0]
+  upper: [100, 100, 100, 100, 100, 100]
+  max_velocity: [240, 240, 240, 240, 240, 240]
+  max_acceleration: [1200, 1200, 1200, 1200, 1200, 1200]
+  max_delta_per_30hz_step: 8
+  # Reject isolated chunk-boundary 0<->100 predictions, then apply the same
+  # final rate used by the one-shot micro-motion envelope.
+  spike_rejection_threshold_points: 30
+  spike_confirmation_steps: 4
+  spike_hysteresis_points: 5
+  final_max_rate_points_s: 15
+right_o6:
+  lower: [0, 0, 0, 0, 0, 0]
+  upper: [100, 100, 100, 100, 100, 100]
+  max_velocity: [240, 240, 240, 240, 240, 240]
+  max_acceleration: [1200, 1200, 1200, 1200, 1200, 1200]
+  max_delta_per_30hz_step: 8
+
+joint_order:
+  arms: [shoulder_pitch, shoulder_roll, shoulder_yaw, elbow, wrist_roll, wrist_pitch, wrist_yaw]
+  o6: [thumb_cmc_pitch, thumb_cmc_yaw, index_mcp_pitch, middle_mcp_pitch, ring_mcp_pitch, pinky_mcp_pitch]
+
+hardware_note: >-
+  URDF position limits are locally verified. Conservative velocity/acceleration
+  values are dry-run defaults and must be approved against the real controller
+  before real_hardware_enabled may ever be changed.

@@ -1,0 +1,2980 @@
+{
+  "evaluation_contract": {
+    "checkpoint": "checkpoint-3000 corrected_v1",
+    "seed": 42,
+    "denoising_steps": 4,
+    "execution_horizon": 16,
+    "frequency_hz": 30,
+    "official_open_loop_plots_also_generated": true
+  },
+  "splits": {
+    "smoke": {
+      "episodes": 2,
+      "groups": {
+        "left_arm": {
+          "frames": 1048,
+          "dimensions": 7,
+          "mae": 0.042673562000776,
+          "rmse": 0.06247044963482852,
+          "error_abs_distribution": {
+            "mean": 0.042673562000776,
+            "median": 0.02802620828151703,
+            "p95": 0.13608094304800034,
+            "p99": 0.215176381170749,
+            "max": 0.42486875504255295
+          },
+          "mean_valid_dimension_correlation": 0.9828228845593772,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.05256510807338121,
+              "rmse": 0.06886485755183877,
+              "max_absolute_error": 0.31302475929260254,
+              "correlation": 0.9889766371881795,
+              "gt_range": [
+                -1.407423734664917,
+                0.4344293475151062
+              ],
+              "prediction_range": [
+                -1.345826268196106,
+                0.4614606201648712
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.055214675477499725,
+              "rmse": 0.07692697381025293,
+              "max_absolute_error": 0.3943723440170288,
+              "correlation": 0.9863325720063179,
+              "gt_range": [
+                0.15756112337112427,
+                1.8711341619491577
+              ],
+              "prediction_range": [
+                0.097816601395607,
+                2.0175769329071045
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.04587636801068389,
+              "rmse": 0.060380834088159085,
+              "max_absolute_error": 0.3033481687307358,
+              "correlation": 0.9888261703431477,
+              "gt_range": [
+                -0.39393094182014465,
+                0.9799681305885315
+              ],
+              "prediction_range": [
+                -0.45214706659317017,
+                0.9958310127258301
+              ]
+            },
+            "elbow": {
+              "mae": 0.05668165628911167,
+              "rmse": 0.07657667072902886,
+              "max_absolute_error": 0.30738940834999084,
+              "correlation": 0.9880179410198088,
+              "gt_range": [
+                -0.2949472963809967,
+                1.4344255924224854
+              ],
+              "prediction_range": [
+                -0.36525630950927734,
+                1.4649041891098022
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.053691657447902205,
+              "rmse": 0.07798088880955925,
+              "max_absolute_error": 0.42486875504255295,
+              "correlation": 0.9893959998649134,
+              "gt_range": [
+                -1.0245182514190674,
+                0.9859314560890198
+              ],
+              "prediction_range": [
+                -1.2737057209014893,
+                1.0402861833572388
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.013648399706833946,
+              "rmse": 0.01751773424340262,
+              "max_absolute_error": 0.06202465668320656,
+              "correlation": 0.9787732344140391,
+              "gt_range": [
+                0.01186469104140997,
+                0.37548357248306274
+              ],
+              "prediction_range": [
+                -0.03895880654454231,
+                0.3541885316371918
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.021037069000019372,
+              "rmse": 0.027569003974208393,
+              "max_absolute_error": 0.11634045839309692,
+              "correlation": 0.9594376370792337,
+              "gt_range": [
+                0.1868322789669037,
+                0.6334056258201599
+              ],
+              "prediction_range": [
+                0.15668122470378876,
+                0.6552194952964783
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.05655283401470764,
+              "median": 0.038080766797065735,
+              "p95": 0.18103737384080884,
+              "p99": 0.26712552070617673,
+              "max": 0.4882981479167938
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.014967450279592802,
+              "median": 0.006229124963283539,
+              "p95": 0.06314700841903685,
+              "p99": 0.09380417212843867,
+              "max": 0.17391520738601685
+            },
+            "prediction_interior_jump": {
+              "mean": 0.015161526015109377,
+              "median": 0.009224623441696167,
+              "p95": 0.04878288358449935,
+              "p99": 0.08163470864295957,
+              "max": 0.20264607667922974
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.027240980814635156,
+              "median": 0.018344402313232422,
+              "p95": 0.08719271123409261,
+              "p99": 0.13202005892992,
+              "max": 0.2890526056289673
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 15,
+            "dimension": 4,
+            "name": "wrist_roll",
+            "absolute_error": 0.42486875504255295,
+            "ground_truth": -0.33042553067207336,
+            "prediction": 0.09444322437047958,
+            "is_chunk_start": false
+          }
+        },
+        "right_arm": {
+          "frames": 1048,
+          "dimensions": 7,
+          "mae": 0.019138781100124423,
+          "rmse": 0.026078233924427752,
+          "error_abs_distribution": {
+            "mean": 0.019138781100124423,
+            "median": 0.014185111969709396,
+            "p95": 0.055092185735702515,
+            "p99": 0.08158924579620357,
+            "max": 0.1471785008907318
+          },
+          "mean_valid_dimension_correlation": 0.9320651932545488,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.026574972657657476,
+              "rmse": 0.034323889951139795,
+              "max_absolute_error": 0.1340666264295578,
+              "correlation": 0.973505003800151,
+              "gt_range": [
+                -0.5177780389785767,
+                0.15782231092453003
+              ],
+              "prediction_range": [
+                -0.46931546926498413,
+                0.18660640716552734
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.024940320809606377,
+              "rmse": 0.032247452913501076,
+              "max_absolute_error": 0.1471785008907318,
+              "correlation": 0.94462439855594,
+              "gt_range": [
+                -0.6321141123771667,
+                -0.19149401783943176
+              ],
+              "prediction_range": [
+                -0.6083551645278931,
+                -0.1979072242975235
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.018577002249878054,
+              "rmse": 0.024677853762703643,
+              "max_absolute_error": 0.09646421670913696,
+              "correlation": 0.9889136552578158,
+              "gt_range": [
+                -0.3928476870059967,
+                0.27868202328681946
+              ],
+              "prediction_range": [
+                -0.3661058843135834,
+                0.25869646668434143
+              ]
+            },
+            "elbow": {
+              "mae": 0.024097534024533424,
+              "rmse": 0.030939826829640898,
+              "max_absolute_error": 0.13615065813064575,
+              "correlation": 0.9178477526641736,
+              "gt_range": [
+                0.8792877197265625,
+                1.3252851963043213
+              ],
+              "prediction_range": [
+                0.9164021015167236,
+                1.2969095706939697
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.017880429151176495,
+              "rmse": 0.02384487174831277,
+              "max_absolute_error": 0.10495269298553467,
+              "correlation": 0.879822703530396,
+              "gt_range": [
+                0.2904241383075714,
+                0.5721142292022705
+              ],
+              "prediction_range": [
+                0.29769769310951233,
+                0.6110774278640747
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.008931291749595819,
+              "rmse": 0.011696583308135156,
+              "max_absolute_error": 0.04131297394633293,
+              "correlation": 0.958938005442106,
+              "gt_range": [
+                -0.07743532210588455,
+                0.13915148377418518
+              ],
+              "prediction_range": [
+                -0.10141337662935257,
+                0.1326640546321869
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.012969917058423305,
+              "rmse": 0.016457066299149885,
+              "max_absolute_error": 0.06070514302700758,
+              "correlation": 0.8608048335312587,
+              "gt_range": [
+                -0.052344910800457,
+                0.09607554972171783
+              ],
+              "prediction_range": [
+                -0.04199172928929329,
+                0.09578407555818558
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.02053911216717097,
+              "median": 0.015764325857162476,
+              "p95": 0.05738302916288374,
+              "p99": 0.08847257673740386,
+              "max": 0.09580827504396439
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.008937315443160645,
+              "median": 0.004176877439022064,
+              "p95": 0.0365966685116291,
+              "p99": 0.06010941803455351,
+              "max": 0.10066750645637512
+            },
+            "prediction_interior_jump": {
+              "mean": 0.005056013053205598,
+              "median": 0.003362564370036125,
+              "p95": 0.01590366419404743,
+              "p99": 0.026336987316608225,
+              "max": 0.06515964865684509
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.016145429785345704,
+              "median": 0.010684025939553976,
+              "p95": 0.052512142993509724,
+              "p99": 0.07221611082553862,
+              "max": 0.09975531697273254
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 568,
+            "dimension": 1,
+            "name": "shoulder_roll",
+            "absolute_error": 0.1471785008907318,
+            "ground_truth": -0.31493833661079407,
+            "prediction": -0.4621168375015259,
+            "is_chunk_start": false
+          }
+        },
+        "left_o6": {
+          "frames": 1048,
+          "dimensions": 6,
+          "mae": 1.2027204337058253,
+          "rmse": 4.242590586972158,
+          "error_abs_distribution": {
+            "mean": 1.2027204337058253,
+            "median": 0.0,
+            "p95": 3.7598735809326125,
+            "p99": 15.413583755493189,
+            "max": 70.00076675415039
+          },
+          "mean_valid_dimension_correlation": 0.9925620520388557,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 2.0333791325110515,
+              "rmse": 2.7098615817776843,
+              "max_absolute_error": 27.987594604492188,
+              "correlation": 0.993115439499301,
+              "gt_range": [
+                53.33333206176758,
+                100.0
+              ],
+              "prediction_range": [
+                51.959228515625,
+                100.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 1.8328624536062925,
+              "rmse": 2.730916317534717,
+              "max_absolute_error": 31.616886138916016,
+              "correlation": 0.9916306583703512,
+              "gt_range": [
+                35.686275482177734,
+                88.62744903564453
+              ],
+              "prediction_range": [
+                33.600643157958984,
+                87.8431396484375
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.9412995549558684,
+              "rmse": 3.4922877813770694,
+              "max_absolute_error": 42.3353271484375,
+              "correlation": 0.991858839255263,
+              "gt_range": [
+                38.431373596191406,
+                100.0
+              ],
+              "prediction_range": [
+                33.12040328979492,
+                100.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.8043076177589766,
+              "rmse": 4.994957776476249,
+              "max_absolute_error": 58.247169494628906,
+              "correlation": 0.9934324501486249,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.7786614971078989,
+              "rmse": 5.0954347810060865,
+              "max_absolute_error": 63.03538513183594,
+              "correlation": 0.9931853545282076,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.8258123462948636,
+              "rmse": 5.485167532718929,
+              "max_absolute_error": 70.00076675415039,
+              "correlation": 0.9921495704313865,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 3.2135007083415985,
+              "median": 0.0,
+              "p95": 9.759857177734368,
+              "p99": 76.40820312500004,
+              "max": 99.8046875
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.3482433805863063,
+              "median": 0.0,
+              "p95": 0.39215850830078125,
+              "p99": 11.047058753967292,
+              "max": 13.725486755371094
+            },
+            "prediction_interior_jump": {
+              "mean": 0.35341614699250407,
+              "median": 0.0,
+              "p95": 1.2686340332031238,
+              "p99": 4.593404922485367,
+              "max": 33.349609375
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 2.2999327331781387,
+              "median": 0.0,
+              "p95": 4.795687484741201,
+              "p99": 42.866348876953175,
+              "max": 64.00582122802734
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 287,
+            "dimension": 5,
+            "name": "pinky_mcp_pitch",
+            "absolute_error": 70.00076675415039,
+            "ground_truth": 29.80392074584961,
+            "prediction": 99.8046875,
+            "is_chunk_start": false
+          },
+          "large_error_rates": {
+            "over_5_points": 0.029580152671755726,
+            "over_10_points": 0.015585241730279899,
+            "over_30_points": 0.005884223918575063
+          }
+        },
+        "right_o6": {
+          "frames": 1048,
+          "dimensions": 6,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "error_abs_distribution": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "mean_valid_dimension_correlation": null,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "prediction_interior_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 0,
+            "dimension": 0,
+            "name": "thumb_cmc_pitch",
+            "absolute_error": 0.0,
+            "ground_truth": 0.0,
+            "prediction": 0.0,
+            "is_chunk_start": false
+          },
+          "prediction_is_exactly_zero": true
+        }
+      }
+    },
+    "val": {
+      "episodes": 2,
+      "groups": {
+        "left_arm": {
+          "frames": 1197,
+          "dimensions": 7,
+          "mae": 0.05453462118807971,
+          "rmse": 0.07952969856037799,
+          "error_abs_distribution": {
+            "mean": 0.05453462118807971,
+            "median": 0.038662031292915344,
+            "p95": 0.15704686675453555,
+            "p99": 0.26913098216056774,
+            "max": 0.9139825254678726
+          },
+          "mean_valid_dimension_correlation": 0.9554077894022984,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.059211910936212926,
+              "rmse": 0.07888682847991241,
+              "max_absolute_error": 0.3797089755535126,
+              "correlation": 0.9821089669261127,
+              "gt_range": [
+                -1.1111406087875366,
+                0.4069385230541229
+              ],
+              "prediction_range": [
+                -1.102198600769043,
+                0.4308703541755676
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.06019296550013766,
+              "rmse": 0.07881061975492575,
+              "max_absolute_error": 0.383869469165802,
+              "correlation": 0.9196615581021723,
+              "gt_range": [
+                0.22059249877929688,
+                1.2398011684417725
+              ],
+              "prediction_range": [
+                0.21618551015853882,
+                1.138791561126709
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.05815821108049398,
+              "rmse": 0.07643705488381083,
+              "max_absolute_error": 0.31532225012779236,
+              "correlation": 0.9568282366595989,
+              "gt_range": [
+                -0.28931063413619995,
+                0.7281135320663452
+              ],
+              "prediction_range": [
+                -0.3372565805912018,
+                0.6843827366828918
+              ]
+            },
+            "elbow": {
+              "mae": 0.07438965991556445,
+              "rmse": 0.09707289276383946,
+              "max_absolute_error": 0.4341543912887573,
+              "correlation": 0.9693287029764227,
+              "gt_range": [
+                -0.480438768863678,
+                1.0613720417022705
+              ],
+              "prediction_range": [
+                -0.4624500572681427,
+                1.1186363697052002
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.06455897717949069,
+              "rmse": 0.10997317848672496,
+              "max_absolute_error": 0.9139825254678726,
+              "correlation": 0.9737768173793163,
+              "gt_range": [
+                -1.1013050079345703,
+                1.0915743112564087
+              ],
+              "prediction_range": [
+                -1.055814266204834,
+                1.1431773900985718
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.02422409505751015,
+              "rmse": 0.032582711543529735,
+              "max_absolute_error": 0.14484087750315666,
+              "correlation": 0.9627812882499246,
+              "gt_range": [
+                -0.1927463263273239,
+                0.28424468636512756
+              ],
+              "prediction_range": [
+                -0.17990033328533173,
+                0.29893743991851807
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.04100652864714812,
+              "rmse": 0.058472747764278944,
+              "max_absolute_error": 0.2712629437446594,
+              "correlation": 0.9233689555225414,
+              "gt_range": [
+                0.022088821977376938,
+                0.8169256448745728
+              ],
+              "prediction_range": [
+                0.06317797303199768,
+                0.743037223815918
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.06686135526732129,
+              "median": 0.045081108808517456,
+              "p95": 0.20664265975356097,
+              "p99": 0.33942313998937595,
+              "max": 0.9191473126411438
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.009639603363369812,
+              "median": 0.003381088376045227,
+              "p95": 0.036760696768760655,
+              "p99": 0.07540387511253356,
+              "max": 0.15041029453277588
+            },
+            "prediction_interior_jump": {
+              "mean": 0.012752240313437739,
+              "median": 0.00814393162727356,
+              "p95": 0.03892515078186989,
+              "p99": 0.057536628544330594,
+              "max": 0.11194908618927002
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.03154536527779284,
+              "median": 0.021775225177407265,
+              "p95": 0.08738318122923373,
+              "p99": 0.13316360577940936,
+              "max": 0.15611165761947632
+            }
+          },
+          "max_error_location": {
+            "episode": 1,
+            "frame": 15,
+            "dimension": 4,
+            "name": "wrist_roll",
+            "absolute_error": 0.9139825254678726,
+            "ground_truth": -0.7805290818214417,
+            "prediction": 0.13345344364643097,
+            "is_chunk_start": false
+          }
+        },
+        "right_arm": {
+          "frames": 1197,
+          "dimensions": 7,
+          "mae": 0.028200661467310612,
+          "rmse": 0.038492567752584375,
+          "error_abs_distribution": {
+            "mean": 0.028200661467310612,
+            "median": 0.02099519968032837,
+            "p95": 0.07770377774722871,
+            "p99": 0.12656400993466366,
+            "max": 0.2206038013100624
+          },
+          "mean_valid_dimension_correlation": 0.8844933932917174,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.04542404025449677,
+              "rmse": 0.06128526160425877,
+              "max_absolute_error": 0.2206038013100624,
+              "correlation": 0.8988032658097135,
+              "gt_range": [
+                -0.24292553961277008,
+                0.23201748728752136
+              ],
+              "prediction_range": [
+                -0.22556744515895844,
+                0.21229660511016846
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.028031091206553786,
+              "rmse": 0.034811537950807575,
+              "max_absolute_error": 0.14479047060012817,
+              "correlation": 0.8124233850831796,
+              "gt_range": [
+                -0.6442092061042786,
+                -0.2461272031068802
+              ],
+              "prediction_range": [
+                -0.6218833923339844,
+                -0.2879786193370819
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.026903765852472186,
+              "rmse": 0.036168147128329234,
+              "max_absolute_error": 0.1313532292842865,
+              "correlation": 0.9327360068376117,
+              "gt_range": [
+                -0.3517908453941345,
+                0.13400259613990784
+              ],
+              "prediction_range": [
+                -0.3571094274520874,
+                0.1247464120388031
+              ]
+            },
+            "elbow": {
+              "mae": 0.028327031442296435,
+              "rmse": 0.0351318642204597,
+              "max_absolute_error": 0.09849333763122559,
+              "correlation": 0.6344206432848267,
+              "gt_range": [
+                0.9564038515090942,
+                1.2475156784057617
+              ],
+              "prediction_range": [
+                0.9772070050239563,
+                1.2197884321212769
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.03183488600372437,
+              "rmse": 0.04090070151612088,
+              "max_absolute_error": 0.13094839453697205,
+              "correlation": 0.9757746352160988,
+              "gt_range": [
+                -0.46415871381759644,
+                0.29125720262527466
+              ],
+              "prediction_range": [
+                -0.452973872423172,
+                0.27277979254722595
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.01711883978112089,
+              "rmse": 0.023044875233991343,
+              "max_absolute_error": 0.10441015660762787,
+              "correlation": 0.9822484639993498,
+              "gt_range": [
+                -0.09405404329299927,
+                0.281205415725708
+              ],
+              "prediction_range": [
+                -0.0847630575299263,
+                0.27161529660224915
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.019764975730509844,
+              "rmse": 0.025645692260997992,
+              "max_absolute_error": 0.09673902206122875,
+              "correlation": 0.955047352811241,
+              "gt_range": [
+                -0.1871918886899948,
+                0.1138165295124054
+              ],
+              "prediction_range": [
+                -0.1829550862312317,
+                0.07715380936861038
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.023287864520374513,
+              "median": 0.017616067081689835,
+              "p95": 0.0644219134002924,
+              "p99": 0.09594067096710202,
+              "max": 0.1324828416109085
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.006252140625362899,
+              "median": 0.0024856701493263245,
+              "p95": 0.026782585680484763,
+              "p99": 0.04566716913133855,
+              "max": 0.06637018918991089
+            },
+            "prediction_interior_jump": {
+              "mean": 0.004165293816704343,
+              "median": 0.002900749444961548,
+              "p95": 0.012270651757717133,
+              "p99": 0.01999876409769058,
+              "max": 0.06412157416343689
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.021757010180812372,
+              "median": 0.016304656863212585,
+              "p95": 0.05819014497101307,
+              "p99": 0.11587307564914218,
+              "max": 0.16215285658836365
+            }
+          },
+          "max_error_location": {
+            "episode": 1,
+            "frame": 296,
+            "dimension": 0,
+            "name": "shoulder_pitch",
+            "absolute_error": 0.2206038013100624,
+            "ground_truth": 0.11775416880846024,
+            "prediction": -0.10284963250160217,
+            "is_chunk_start": false
+          }
+        },
+        "left_o6": {
+          "frames": 1197,
+          "dimensions": 6,
+          "mae": 5.604258605702546,
+          "rmse": 16.476030109077477,
+          "error_abs_distribution": {
+            "mean": 5.604258605702546,
+            "median": 0.0,
+            "p95": 38.484144395589816,
+            "p99": 97.49630053281777,
+            "max": 100.0
+          },
+          "mean_valid_dimension_correlation": 0.9027327913015152,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 5.320681190331379,
+              "rmse": 9.37836965654312,
+              "max_absolute_error": 50.5206413269043,
+              "correlation": 0.9064434328686121,
+              "gt_range": [
+                46.66666793823242,
+                100.0
+              ],
+              "prediction_range": [
+                42.39607620239258,
+                100.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 4.836288079283292,
+              "rmse": 8.462602694216008,
+              "max_absolute_error": 43.392311096191406,
+              "correlation": 0.908572676081178,
+              "gt_range": [
+                29.80392074584961,
+                86.2745132446289
+              ],
+              "prediction_range": [
+                28.627450942993164,
+                87.8431396484375
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 8.078955032672102,
+              "rmse": 19.3622359078119,
+              "max_absolute_error": 97.64705872535706,
+              "correlation": 0.8866336218613187,
+              "gt_range": [
+                1.1764706373214722,
+                100.0
+              ],
+              "prediction_range": [
+                35.436580657958984,
+                100.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 4.640679789714845,
+              "rmse": 18.791155552247893,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9076525781328237,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 4.811227473424889,
+              "rmse": 19.091902809329486,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9050897650821528,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 5.937720068788767,
+              "rmse": 19.40833552721676,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9020046737830061,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 5.0328414805300605,
+              "median": 0.0,
+              "p95": 39.328124618530154,
+              "p99": 84.70312499999997,
+              "max": 100.0
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.287051722407341,
+              "median": 0.0,
+              "p95": 0.39215850830078125,
+              "p99": 8.121568927764885,
+              "max": 16.4705867767334
+            },
+            "prediction_interior_jump": {
+              "mean": 0.633909993394301,
+              "median": 0.0,
+              "p95": 1.9473810195922852,
+              "p99": 14.083179473876953,
+              "max": 52.9296875
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 5.405862275544588,
+              "median": 0.1987590789794922,
+              "p95": 38.789638328552236,
+              "p99": 78.12651535034172,
+              "max": 100.0
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 272,
+            "dimension": 5,
+            "name": "pinky_mcp_pitch",
+            "absolute_error": 100.0,
+            "ground_truth": 0.0,
+            "prediction": 100.0,
+            "is_chunk_start": true
+          },
+          "large_error_rates": {
+            "over_5_points": 0.16485658590921748,
+            "over_10_points": 0.0960735171261487,
+            "over_30_points": 0.06794764689501531
+          }
+        },
+        "right_o6": {
+          "frames": 1197,
+          "dimensions": 6,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "error_abs_distribution": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "mean_valid_dimension_correlation": null,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "prediction_interior_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 0,
+            "dimension": 0,
+            "name": "thumb_cmc_pitch",
+            "absolute_error": 0.0,
+            "ground_truth": 0.0,
+            "prediction": 0.0,
+            "is_chunk_start": false
+          },
+          "prediction_is_exactly_zero": true
+        }
+      }
+    },
+    "test": {
+      "episodes": 2,
+      "groups": {
+        "left_arm": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.07647027250200956,
+          "rmse": 0.11551373767779642,
+          "error_abs_distribution": {
+            "mean": 0.07647027250200956,
+            "median": 0.04988211393356323,
+            "p95": 0.2458522796630854,
+            "p99": 0.40741875469684596,
+            "max": 1.0477492064237595
+          },
+          "mean_valid_dimension_correlation": 0.9445560605672471,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.10049976956361813,
+              "rmse": 0.14936889729012368,
+              "max_absolute_error": 1.0477492064237595,
+              "correlation": 0.9571624216105644,
+              "gt_range": [
+                -1.4138243198394775,
+                0.5161595344543457
+              ],
+              "prediction_range": [
+                -1.2050704956054688,
+                0.4195525348186493
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.09545841951038163,
+              "rmse": 0.1330680064256121,
+              "max_absolute_error": 0.6763922870159149,
+              "correlation": 0.9297282687856229,
+              "gt_range": [
+                0.22350238263607025,
+                1.6814930438995361
+              ],
+              "prediction_range": [
+                0.1910257190465927,
+                1.5638742446899414
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.09004629119995756,
+              "rmse": 0.12488691444010853,
+              "max_absolute_error": 0.5560161471366882,
+              "correlation": 0.9451357938302841,
+              "gt_range": [
+                -0.23774735629558563,
+                0.9416614174842834
+              ],
+              "prediction_range": [
+                -0.3134631812572479,
+                0.8462862372398376
+              ]
+            },
+            "elbow": {
+              "mae": 0.08389091652401395,
+              "rmse": 0.11625047437556095,
+              "max_absolute_error": 0.5669438689947128,
+              "correlation": 0.9480122805050164,
+              "gt_range": [
+                -0.37049853801727295,
+                1.1190621852874756
+              ],
+              "prediction_range": [
+                -0.35131150484085083,
+                1.1891894340515137
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.09443616639635621,
+              "rmse": 0.13144633824394364,
+              "max_absolute_error": 0.6734428517520428,
+              "correlation": 0.9774691396075862,
+              "gt_range": [
+                -1.1215510368347168,
+                0.9806674718856812
+              ],
+              "prediction_range": [
+                -1.0512250661849976,
+                1.0901979207992554
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.02105474205033425,
+              "rmse": 0.029585558350136966,
+              "max_absolute_error": 0.14731065183877945,
+              "correlation": 0.9703686909670362,
+              "gt_range": [
+                -0.2127843201160431,
+                0.37287604808807373
+              ],
+              "prediction_range": [
+                -0.16570952534675598,
+                0.373263418674469
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.049905602269405165,
+              "rmse": 0.07823965773675493,
+              "max_absolute_error": 0.515908595174551,
+              "correlation": 0.8840158286646196,
+              "gt_range": [
+                -0.008194985799491405,
+                0.7777723670005798
+              ],
+              "prediction_range": [
+                -0.019747305661439896,
+                0.7131319046020508
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.08783708726555742,
+              "median": 0.051683440804481506,
+              "p95": 0.30400018095970116,
+              "p99": 0.5128620246052737,
+              "max": 0.9695634245872498
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.011759287522185205,
+              "median": 0.005744407651945949,
+              "p95": 0.04209467172622677,
+              "p99": 0.07537381008267388,
+              "max": 0.1193532943725586
+            },
+            "prediction_interior_jump": {
+              "mean": 0.012961522895212392,
+              "median": 0.00868140161037445,
+              "p95": 0.03936924412846565,
+              "p99": 0.056124323606490986,
+              "max": 0.09017059206962585
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.04367368089657234,
+              "median": 0.030834436416625977,
+              "p95": 0.12993392348289487,
+              "p99": 0.19700966522097585,
+              "max": 0.24739235639572144
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 557,
+            "dimension": 0,
+            "name": "shoulder_pitch",
+            "absolute_error": 1.0477492064237595,
+            "ground_truth": 0.09560559689998627,
+            "prediction": -0.9521436095237732,
+            "is_chunk_start": false
+          }
+        },
+        "right_arm": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.0330566168226292,
+          "rmse": 0.04360393561097319,
+          "error_abs_distribution": {
+            "mean": 0.0330566168226292,
+            "median": 0.02580133080482483,
+            "p95": 0.08829885125160211,
+            "p99": 0.12823191761970518,
+            "max": 0.29702867195010185
+          },
+          "mean_valid_dimension_correlation": 0.8680987096562204,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.05181510413406752,
+              "rmse": 0.06029998463265493,
+              "max_absolute_error": 0.14732325077056885,
+              "correlation": 0.9027013454818851,
+              "gt_range": [
+                -0.0812050849199295,
+                0.2787909209728241
+              ],
+              "prediction_range": [
+                -0.16158613562583923,
+                0.21514534950256348
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.034135211200093704,
+              "rmse": 0.04727893885247984,
+              "max_absolute_error": 0.2961825728416443,
+              "correlation": 0.8084686612220155,
+              "gt_range": [
+                -0.7261269688606262,
+                -0.29115718603134155
+              ],
+              "prediction_range": [
+                -0.6825196743011475,
+                -0.3235713243484497
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.03914205386644744,
+              "rmse": 0.05364448537635718,
+              "max_absolute_error": 0.29702867195010185,
+              "correlation": 0.9052270838891929,
+              "gt_range": [
+                -0.3611584007740021,
+                0.12526559829711914
+              ],
+              "prediction_range": [
+                -0.3539140224456787,
+                0.11320344358682632
+              ]
+            },
+            "elbow": {
+              "mae": 0.028910968232095192,
+              "rmse": 0.036282982662848136,
+              "max_absolute_error": 0.12080729007720947,
+              "correlation": 0.7919613559529385,
+              "gt_range": [
+                0.9482306838035583,
+                1.2335675954818726
+              ],
+              "prediction_range": [
+                0.9668840765953064,
+                1.2133954763412476
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.029192967342292025,
+              "rmse": 0.03788135758170359,
+              "max_absolute_error": 0.15445202589035034,
+              "correlation": 0.9152981803022039,
+              "gt_range": [
+                -0.37292909622192383,
+                0.13962335884571075
+              ],
+              "prediction_range": [
+                -0.34621092677116394,
+                0.09486108273267746
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.02663521302725694,
+              "rmse": 0.03329959429751196,
+              "max_absolute_error": 0.09857165813446045,
+              "correlation": 0.8896969023607787,
+              "gt_range": [
+                0.0331525020301342,
+                0.3356143534183502
+              ],
+              "prediction_range": [
+                0.015637539327144623,
+                0.35503631830215454
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.021564799956151584,
+              "rmse": 0.02645166015258408,
+              "max_absolute_error": 0.09181493800133467,
+              "correlation": 0.8633374383845274,
+              "gt_range": [
+                -0.030414961278438568,
+                0.19142717123031616
+              ],
+              "prediction_range": [
+                -0.05100971832871437,
+                0.1682450771331787
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.027557962132675366,
+              "median": 0.020182447507977486,
+              "p95": 0.08035832494497294,
+              "p99": 0.1263675394654272,
+              "max": 0.2604765295982361
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.0067073352241667945,
+              "median": 0.003700980916619301,
+              "p95": 0.024372418876737353,
+              "p99": 0.03335742175579071,
+              "max": 0.0862431526184082
+            },
+            "prediction_interior_jump": {
+              "mean": 0.004123962200477627,
+              "median": 0.00294649600982666,
+              "p95": 0.012027889490127563,
+              "p99": 0.017843751236796344,
+              "max": 0.03433510661125183
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.02391422228549668,
+              "median": 0.018641740083694458,
+              "p95": 0.06369222700595854,
+              "p99": 0.09795477688312529,
+              "max": 0.1371293067932129
+            }
+          },
+          "max_error_location": {
+            "episode": 1,
+            "frame": 46,
+            "dimension": 2,
+            "name": "shoulder_yaw",
+            "absolute_error": 0.29702867195010185,
+            "ground_truth": -0.251742959022522,
+            "prediction": 0.04528571292757988,
+            "is_chunk_start": false
+          }
+        },
+        "left_o6": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 4.948924884767641,
+          "rmse": 14.315958124873205,
+          "error_abs_distribution": {
+            "mean": 4.948924884767641,
+            "median": 0.0,
+            "p95": 21.392832374572677,
+            "p99": 84.40223651915777,
+            "max": 100.0
+          },
+          "mean_valid_dimension_correlation": 0.9103437517411642,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 5.523419177363175,
+              "rmse": 9.064405708337347,
+              "max_absolute_error": 50.4163932800293,
+              "correlation": 0.9199324976580685,
+              "gt_range": [
+                57.25490188598633,
+                100.0
+              ],
+              "prediction_range": [
+                43.52115249633789,
+                100.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 4.976155607972769,
+              "rmse": 8.135894235494575,
+              "max_absolute_error": 46.2944221496582,
+              "correlation": 0.9118940948460327,
+              "gt_range": [
+                37.64706039428711,
+                87.45098114013672
+              ],
+              "prediction_range": [
+                28.627450942993164,
+                87.8431396484375
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 2.941786822525037,
+              "rmse": 10.782354405639293,
+              "max_absolute_error": 61.17647171020508,
+              "correlation": 0.9092868160473262,
+              "gt_range": [
+                38.82352828979492,
+                100.0
+              ],
+              "prediction_range": [
+                35.53308868408203,
+                100.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 4.4904080838139,
+              "rmse": 17.642892470585373,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9097813295824637,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 4.4541354301673755,
+              "rmse": 17.54931933571071,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9113233291726874,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 7.307644186763588,
+              "rmse": 18.596082542784366,
+              "max_absolute_error": 100.0,
+              "correlation": 0.899844443140407,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 6.828925420572092,
+              "median": 0.0,
+              "p95": 51.0789503097533,
+              "p99": 98.4921875,
+              "max": 100.0
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.27910264010901925,
+              "median": 0.0,
+              "p95": 0.39215850830078125,
+              "p99": 11.309804267883269,
+              "max": 19.215686798095703
+            },
+            "prediction_interior_jump": {
+              "mean": 0.9416663500207508,
+              "median": 0.0,
+              "p95": 3.90625,
+              "p99": 18.9453125,
+              "max": 63.4765625
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 6.759512287002426,
+              "median": 0.22269058227539062,
+              "p95": 39.55215988159179,
+              "p99": 90.47717498779295,
+              "max": 100.0
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 320,
+            "dimension": 3,
+            "name": "middle_mcp_pitch",
+            "absolute_error": 100.0,
+            "ground_truth": 0.0,
+            "prediction": 100.0,
+            "is_chunk_start": true
+          },
+          "large_error_rates": {
+            "over_5_points": 0.20530998053933833,
+            "over_10_points": 0.13817069780372532,
+            "over_30_points": 0.0408673894912427
+          }
+        },
+        "right_o6": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "error_abs_distribution": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "mean_valid_dimension_correlation": null,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "continuity": {
+            "prediction_chunk_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "ground_truth_at_same_boundary_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "prediction_interior_jump": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "absolute_error_at_chunk_start": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            }
+          },
+          "max_error_location": {
+            "episode": 0,
+            "frame": 0,
+            "dimension": 0,
+            "name": "thumb_cmc_pitch",
+            "absolute_error": 0.0,
+            "ground_truth": 0.0,
+            "prediction": 0.0,
+            "is_chunk_start": false
+          },
+          "prediction_is_exactly_zero": true
+        }
+      }
+    }
+  },
+  "training": {
+    "trainer_state": "/home/slxy/\u4e0b\u8f7d/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000/trainer_state.json",
+    "global_step": 3000,
+    "max_steps": 3000,
+    "logged_records": 300,
+    "logging_interval_steps": 10,
+    "loss": {
+      "first": 1.2356,
+      "last": 0.0434,
+      "mean_first_100_steps": 1.09368,
+      "mean_last_100_steps": 0.04368,
+      "minimum": 0.0359,
+      "minimum_step": 2750,
+      "maximum": 1.2356,
+      "all_finite": true
+    },
+    "gradient_norm": {
+      "median": 0.5353488028049469,
+      "maximum": 1.3661422729492188,
+      "last": 0.32358524203300476,
+      "all_finite": true
+    },
+    "learning_rate": {
+      "maximum": 9.999753945398704e-05,
+      "last": 3.037735734623404e-11
+    }
+  },
+  "old_vs_corrected_test": {
+    "left_arm": {
+      "old_checkpoint_4000_test_mae": 0.23318498308172683,
+      "corrected_checkpoint_3000_test_mae": 0.07647027250200956,
+      "relative_reduction": 0.6720617619051042
+    },
+    "right_arm": {
+      "old_checkpoint_4000_test_mae": 0.26206925281845106,
+      "corrected_checkpoint_3000_test_mae": 0.0330566168226292,
+      "relative_reduction": 0.8738630477741346
+    },
+    "left_o6": {
+      "old_checkpoint_4000_test_mae": 19.79285790702685,
+      "corrected_checkpoint_3000_test_mae": 4.948924884767641,
+      "relative_reduction": 0.7499641078608119
+    },
+    "right_o6": {
+      "old_checkpoint_4000_test_mae": 0.0,
+      "corrected_checkpoint_3000_test_mae": 0.0,
+      "relative_reduction": null
+    }
+  },
+  "test_execution_horizon_comparison": {
+    "left_arm": {
+      "execution_horizon_16": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.07647027250200956,
+          "rmse": 0.11551373767779642,
+          "error_abs_distribution": {
+            "mean": 0.07647027250200956,
+            "median": 0.04988211393356323,
+            "p95": 0.2458522796630854,
+            "p99": 0.40741875469684596,
+            "max": 1.0477492064237595
+          },
+          "mean_valid_dimension_correlation": 0.9445560605672471,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.10049976956361813,
+              "rmse": 0.14936889729012368,
+              "max_absolute_error": 1.0477492064237595,
+              "correlation": 0.9571624216105644,
+              "gt_range": [
+                -1.4138243198394775,
+                0.5161595344543457
+              ],
+              "prediction_range": [
+                -1.2050704956054688,
+                0.4195525348186493
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.09545841951038163,
+              "rmse": 0.1330680064256121,
+              "max_absolute_error": 0.6763922870159149,
+              "correlation": 0.9297282687856229,
+              "gt_range": [
+                0.22350238263607025,
+                1.6814930438995361
+              ],
+              "prediction_range": [
+                0.1910257190465927,
+                1.5638742446899414
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.09004629119995756,
+              "rmse": 0.12488691444010853,
+              "max_absolute_error": 0.5560161471366882,
+              "correlation": 0.9451357938302841,
+              "gt_range": [
+                -0.23774735629558563,
+                0.9416614174842834
+              ],
+              "prediction_range": [
+                -0.3134631812572479,
+                0.8462862372398376
+              ]
+            },
+            "elbow": {
+              "mae": 0.08389091652401395,
+              "rmse": 0.11625047437556095,
+              "max_absolute_error": 0.5669438689947128,
+              "correlation": 0.9480122805050164,
+              "gt_range": [
+                -0.37049853801727295,
+                1.1190621852874756
+              ],
+              "prediction_range": [
+                -0.35131150484085083,
+                1.1891894340515137
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.09443616639635621,
+              "rmse": 0.13144633824394364,
+              "max_absolute_error": 0.6734428517520428,
+              "correlation": 0.9774691396075862,
+              "gt_range": [
+                -1.1215510368347168,
+                0.9806674718856812
+              ],
+              "prediction_range": [
+                -1.0512250661849976,
+                1.0901979207992554
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.02105474205033425,
+              "rmse": 0.029585558350136966,
+              "max_absolute_error": 0.14731065183877945,
+              "correlation": 0.9703686909670362,
+              "gt_range": [
+                -0.2127843201160431,
+                0.37287604808807373
+              ],
+              "prediction_range": [
+                -0.16570952534675598,
+                0.373263418674469
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.049905602269405165,
+              "rmse": 0.07823965773675493,
+              "max_absolute_error": 0.515908595174551,
+              "correlation": 0.8840158286646196,
+              "gt_range": [
+                -0.008194985799491405,
+                0.7777723670005798
+              ],
+              "prediction_range": [
+                -0.019747305661439896,
+                0.7131319046020508
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.08783708726555742,
+            "median": 0.051683440804481506,
+            "p95": 0.30400018095970116,
+            "p99": 0.5128620246052737,
+            "max": 0.9695634245872498
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.011759287522185205,
+            "median": 0.005744407651945949,
+            "p95": 0.04209467172622677,
+            "p99": 0.07537381008267388,
+            "max": 0.1193532943725586
+          },
+          "prediction_interior_jump": {
+            "mean": 0.012961522895212392,
+            "median": 0.00868140161037445,
+            "p95": 0.03936924412846565,
+            "p99": 0.056124323606490986,
+            "max": 0.09017059206962585
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.04367368089657234,
+            "median": 0.030834436416625977,
+            "p95": 0.12993392348289487,
+            "p99": 0.19700966522097585,
+            "max": 0.24739235639572144
+          }
+        }
+      },
+      "execution_horizon_3": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.04849877295490988,
+          "rmse": 0.06745835553492838,
+          "error_abs_distribution": {
+            "mean": 0.04849877295490988,
+            "median": 0.03466896712779999,
+            "p95": 0.1385674893856048,
+            "p99": 0.20797251880168913,
+            "max": 0.6353381276130676
+          },
+          "mean_valid_dimension_correlation": 0.9826986138412703,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.07257403150399207,
+              "rmse": 0.0925465355575873,
+              "max_absolute_error": 0.36547423899173737,
+              "correlation": 0.9865623160860334,
+              "gt_range": [
+                -1.4138243198394775,
+                0.5161595344543457
+              ],
+              "prediction_range": [
+                -1.2637782096862793,
+                0.44366222620010376
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.07297174470985403,
+              "rmse": 0.0936539461048613,
+              "max_absolute_error": 0.6353381276130676,
+              "correlation": 0.9692737130580723,
+              "gt_range": [
+                0.22350238263607025,
+                1.6814930438995361
+              ],
+              "prediction_range": [
+                0.2122919261455536,
+                1.5897903442382812
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.054264805219728936,
+              "rmse": 0.06777042492827662,
+              "max_absolute_error": 0.26399916410446167,
+              "correlation": 0.9870374942144117,
+              "gt_range": [
+                -0.23774735629558563,
+                0.9416614174842834
+              ],
+              "prediction_range": [
+                -0.26366615295410156,
+                0.8493514060974121
+              ]
+            },
+            "elbow": {
+              "mae": 0.05659354329390278,
+              "rmse": 0.07326918611362306,
+              "max_absolute_error": 0.4204576313495636,
+              "correlation": 0.979450346731625,
+              "gt_range": [
+                -0.37049853801727295,
+                1.1190621852874756
+              ],
+              "prediction_range": [
+                -0.36572983860969543,
+                1.1805745363235474
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.037838275513081214,
+              "rmse": 0.04984716856460543,
+              "max_absolute_error": 0.20450003445148468,
+              "correlation": 0.9966738985606868,
+              "gt_range": [
+                -1.1215510368347168,
+                0.9806674718856812
+              ],
+              "prediction_range": [
+                -1.0819566249847412,
+                1.0010454654693604
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.01421909320795034,
+              "rmse": 0.018568593306657402,
+              "max_absolute_error": 0.07715395838022232,
+              "correlation": 0.9900809044046681,
+              "gt_range": [
+                -0.2127843201160431,
+                0.37287604808807373
+              ],
+              "prediction_range": [
+                -0.17081864178180695,
+                0.37044480443000793
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.031029917235859825,
+              "rmse": 0.04156619125690299,
+              "max_absolute_error": 0.17352893948554993,
+              "correlation": 0.9698116238333951,
+              "gt_range": [
+                -0.008194985799491405,
+                0.7777723670005798
+              ],
+              "prediction_range": [
+                0.004365102853626013,
+                0.7138923406600952
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.02878329301945868,
+            "median": 0.018848061561584473,
+            "p95": 0.0828224837779999,
+            "p99": 0.14178937792778015,
+            "max": 0.2933166027069092
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.012638170180830277,
+            "median": 0.005344688892364502,
+            "p95": 0.050048977136611945,
+            "p99": 0.09842646121978742,
+            "max": 0.30140405893325806
+          },
+          "prediction_interior_jump": {
+            "mean": 0.01145818909091076,
+            "median": 0.007550567388534546,
+            "p95": 0.03456811606884003,
+            "p99": 0.04784753620624523,
+            "max": 0.20076316595077515
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.04388667512141539,
+            "median": 0.03130357712507248,
+            "p95": 0.12852644920349124,
+            "p99": 0.19593686699867227,
+            "max": 0.5297621488571167
+          }
+        }
+      }
+    },
+    "right_arm": {
+      "execution_horizon_16": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.0330566168226292,
+          "rmse": 0.04360393561097319,
+          "error_abs_distribution": {
+            "mean": 0.0330566168226292,
+            "median": 0.02580133080482483,
+            "p95": 0.08829885125160211,
+            "p99": 0.12823191761970518,
+            "max": 0.29702867195010185
+          },
+          "mean_valid_dimension_correlation": 0.8680987096562204,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.05181510413406752,
+              "rmse": 0.06029998463265493,
+              "max_absolute_error": 0.14732325077056885,
+              "correlation": 0.9027013454818851,
+              "gt_range": [
+                -0.0812050849199295,
+                0.2787909209728241
+              ],
+              "prediction_range": [
+                -0.16158613562583923,
+                0.21514534950256348
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.034135211200093704,
+              "rmse": 0.04727893885247984,
+              "max_absolute_error": 0.2961825728416443,
+              "correlation": 0.8084686612220155,
+              "gt_range": [
+                -0.7261269688606262,
+                -0.29115718603134155
+              ],
+              "prediction_range": [
+                -0.6825196743011475,
+                -0.3235713243484497
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.03914205386644744,
+              "rmse": 0.05364448537635718,
+              "max_absolute_error": 0.29702867195010185,
+              "correlation": 0.9052270838891929,
+              "gt_range": [
+                -0.3611584007740021,
+                0.12526559829711914
+              ],
+              "prediction_range": [
+                -0.3539140224456787,
+                0.11320344358682632
+              ]
+            },
+            "elbow": {
+              "mae": 0.028910968232095192,
+              "rmse": 0.036282982662848136,
+              "max_absolute_error": 0.12080729007720947,
+              "correlation": 0.7919613559529385,
+              "gt_range": [
+                0.9482306838035583,
+                1.2335675954818726
+              ],
+              "prediction_range": [
+                0.9668840765953064,
+                1.2133954763412476
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.029192967342292025,
+              "rmse": 0.03788135758170359,
+              "max_absolute_error": 0.15445202589035034,
+              "correlation": 0.9152981803022039,
+              "gt_range": [
+                -0.37292909622192383,
+                0.13962335884571075
+              ],
+              "prediction_range": [
+                -0.34621092677116394,
+                0.09486108273267746
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.02663521302725694,
+              "rmse": 0.03329959429751196,
+              "max_absolute_error": 0.09857165813446045,
+              "correlation": 0.8896969023607787,
+              "gt_range": [
+                0.0331525020301342,
+                0.3356143534183502
+              ],
+              "prediction_range": [
+                0.015637539327144623,
+                0.35503631830215454
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.021564799956151584,
+              "rmse": 0.02645166015258408,
+              "max_absolute_error": 0.09181493800133467,
+              "correlation": 0.8633374383845274,
+              "gt_range": [
+                -0.030414961278438568,
+                0.19142717123031616
+              ],
+              "prediction_range": [
+                -0.05100971832871437,
+                0.1682450771331787
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.027557962132675366,
+            "median": 0.020182447507977486,
+            "p95": 0.08035832494497294,
+            "p99": 0.1263675394654272,
+            "max": 0.2604765295982361
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.0067073352241667945,
+            "median": 0.003700980916619301,
+            "p95": 0.024372418876737353,
+            "p99": 0.03335742175579071,
+            "max": 0.0862431526184082
+          },
+          "prediction_interior_jump": {
+            "mean": 0.004123962200477627,
+            "median": 0.00294649600982666,
+            "p95": 0.012027889490127563,
+            "p99": 0.017843751236796344,
+            "max": 0.03433510661125183
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.02391422228549668,
+            "median": 0.018641740083694458,
+            "p95": 0.06369222700595854,
+            "p99": 0.09795477688312529,
+            "max": 0.1371293067932129
+          }
+        }
+      },
+      "execution_horizon_3": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 7,
+          "mae": 0.025322408137772548,
+          "rmse": 0.033290883950181864,
+          "error_abs_distribution": {
+            "mean": 0.025322408137772548,
+            "median": 0.019908711314201355,
+            "p95": 0.06835976606234907,
+            "p99": 0.10043379649519919,
+            "max": 0.20512714982032776
+          },
+          "mean_valid_dimension_correlation": 0.9264130173191962,
+          "per_dimension": {
+            "shoulder_pitch": {
+              "mae": 0.04940889003005968,
+              "rmse": 0.056945742603495844,
+              "max_absolute_error": 0.1532553881406784,
+              "correlation": 0.909219645859634,
+              "gt_range": [
+                -0.0812050849199295,
+                0.2787909209728241
+              ],
+              "prediction_range": [
+                -0.13951589167118073,
+                0.21705283224582672
+              ]
+            },
+            "shoulder_roll": {
+              "mae": 0.029158289900812335,
+              "rmse": 0.03744053025805918,
+              "max_absolute_error": 0.20512714982032776,
+              "correlation": 0.8821248206910498,
+              "gt_range": [
+                -0.7261269688606262,
+                -0.29115718603134155
+              ],
+              "prediction_range": [
+                -0.6995502710342407,
+                -0.31848257780075073
+              ]
+            },
+            "shoulder_yaw": {
+              "mae": 0.022529753935477848,
+              "rmse": 0.0290186908561812,
+              "max_absolute_error": 0.12114463746547699,
+              "correlation": 0.9728825662320006,
+              "gt_range": [
+                -0.3611584007740021,
+                0.12526559829711914
+              ],
+              "prediction_range": [
+                -0.33534175157546997,
+                0.09105388820171356
+              ]
+            },
+            "elbow": {
+              "mae": 0.022752929916970425,
+              "rmse": 0.02892134010002229,
+              "max_absolute_error": 0.10604435205459595,
+              "correlation": 0.8606549927338565,
+              "gt_range": [
+                0.9482306838035583,
+                1.2335675954818726
+              ],
+              "prediction_range": [
+                0.9868268370628357,
+                1.223222255706787
+              ]
+            },
+            "wrist_roll": {
+              "mae": 0.020690455346494864,
+              "rmse": 0.025577904470500214,
+              "max_absolute_error": 0.08571547269821167,
+              "correlation": 0.965273240277337,
+              "gt_range": [
+                -0.37292909622192383,
+                0.13962335884571075
+              ],
+              "prediction_range": [
+                -0.3395206928253174,
+                0.11684086173772812
+              ]
+            },
+            "wrist_pitch": {
+              "mae": 0.018993448452081056,
+              "rmse": 0.022321165086597473,
+              "max_absolute_error": 0.06110234558582306,
+              "correlation": 0.9478303721981475,
+              "gt_range": [
+                0.0331525020301342,
+                0.3356143534183502
+              ],
+              "prediction_range": [
+                0.019225038588047028,
+                0.3451550304889679
+              ]
+            },
+            "wrist_yaw": {
+              "mae": 0.013723089382511626,
+              "rmse": 0.016804101657337846,
+              "max_absolute_error": 0.04862924199551344,
+              "correlation": 0.9469054832423475,
+              "gt_range": [
+                -0.030414961278438568,
+                0.19142717123031616
+              ],
+              "prediction_range": [
+                -0.05003398656845093,
+                0.17440970242023468
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.011446737486699372,
+            "median": 0.008291399106383324,
+            "p95": 0.03216001093387604,
+            "p99": 0.04754959031939501,
+            "max": 0.08298543095588684
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.0068540517755055425,
+            "median": 0.003298521041870117,
+            "p95": 0.025859332084655764,
+            "p99": 0.04734386175870892,
+            "max": 0.0862431526184082
+          },
+          "prediction_interior_jump": {
+            "mean": 0.0038985535876169997,
+            "median": 0.0027105212211608887,
+            "p95": 0.011530876159667969,
+            "p99": 0.017756733298301648,
+            "max": 0.038501426577568054
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.024007551885687477,
+            "median": 0.0188215933740139,
+            "p95": 0.06578530371189119,
+            "p99": 0.09731205463409423,
+            "max": 0.15315888822078705
+          }
+        }
+      }
+    },
+    "left_o6": {
+      "execution_horizon_16": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 4.948924884767641,
+          "rmse": 14.315958124873205,
+          "error_abs_distribution": {
+            "mean": 4.948924884767641,
+            "median": 0.0,
+            "p95": 21.392832374572677,
+            "p99": 84.40223651915777,
+            "max": 100.0
+          },
+          "mean_valid_dimension_correlation": 0.9103437517411642,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 5.523419177363175,
+              "rmse": 9.064405708337347,
+              "max_absolute_error": 50.4163932800293,
+              "correlation": 0.9199324976580685,
+              "gt_range": [
+                57.25490188598633,
+                100.0
+              ],
+              "prediction_range": [
+                43.52115249633789,
+                100.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 4.976155607972769,
+              "rmse": 8.135894235494575,
+              "max_absolute_error": 46.2944221496582,
+              "correlation": 0.9118940948460327,
+              "gt_range": [
+                37.64706039428711,
+                87.45098114013672
+              ],
+              "prediction_range": [
+                28.627450942993164,
+                87.8431396484375
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 2.941786822525037,
+              "rmse": 10.782354405639293,
+              "max_absolute_error": 61.17647171020508,
+              "correlation": 0.9092868160473262,
+              "gt_range": [
+                38.82352828979492,
+                100.0
+              ],
+              "prediction_range": [
+                35.53308868408203,
+                100.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 4.4904080838139,
+              "rmse": 17.642892470585373,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9097813295824637,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 4.4541354301673755,
+              "rmse": 17.54931933571071,
+              "max_absolute_error": 100.0,
+              "correlation": 0.9113233291726874,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 7.307644186763588,
+              "rmse": 18.596082542784366,
+              "max_absolute_error": 100.0,
+              "correlation": 0.899844443140407,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 6.828925420572092,
+            "median": 0.0,
+            "p95": 51.0789503097533,
+            "p99": 98.4921875,
+            "max": 100.0
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.27910264010901925,
+            "median": 0.0,
+            "p95": 0.39215850830078125,
+            "p99": 11.309804267883269,
+            "max": 19.215686798095703
+          },
+          "prediction_interior_jump": {
+            "mean": 0.9416663500207508,
+            "median": 0.0,
+            "p95": 3.90625,
+            "p99": 18.9453125,
+            "max": 63.4765625
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 6.759512287002426,
+            "median": 0.22269058227539062,
+            "p95": 39.55215988159179,
+            "p99": 90.47717498779295,
+            "max": 100.0
+          }
+        }
+      },
+      "execution_horizon_3": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 5.614484704051178,
+          "rmse": 16.88904852984327,
+          "error_abs_distribution": {
+            "mean": 5.614484704051178,
+            "median": 0.0,
+            "p95": 30.760648727416807,
+            "p99": 96.69182586669916,
+            "max": 100.0
+          },
+          "mean_valid_dimension_correlation": 0.8732117055323211,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 5.9530059998983935,
+              "rmse": 10.438834884963441,
+              "max_absolute_error": 51.0784797668457,
+              "correlation": 0.8830455710389122,
+              "gt_range": [
+                57.25490188598633,
+                100.0
+              ],
+              "prediction_range": [
+                42.846107482910156,
+                100.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 5.5076652825922645,
+              "rmse": 9.816956874040795,
+              "max_absolute_error": 52.05576133728027,
+              "correlation": 0.8640052602023073,
+              "gt_range": [
+                37.64706039428711,
+                87.45098114013672
+              ],
+              "prediction_range": [
+                28.627450942993164,
+                87.8431396484375
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 3.434585895808763,
+              "rmse": 12.568930315078735,
+              "max_absolute_error": 62.536766052246094,
+              "correlation": 0.8776810484169855,
+              "gt_range": [
+                38.82352828979492,
+                100.0
+              ],
+              "prediction_range": [
+                33.40992736816406,
+                100.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 5.30340488440201,
+              "rmse": 20.97586764954752,
+              "max_absolute_error": 100.0,
+              "correlation": 0.8743407139356567,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 5.2745047595423395,
+              "rmse": 20.891991892911776,
+              "max_absolute_error": 100.0,
+              "correlation": 0.8756629239304875,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 8.213741402063299,
+              "rmse": 21.71767683864848,
+              "max_absolute_error": 100.0,
+              "correlation": 0.8645347156695765,
+              "gt_range": [
+                0.0,
+                100.0
+              ],
+              "prediction_range": [
+                0.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 2.1138144654837268,
+            "median": 0.0,
+            "p95": 7.628852653503415,
+            "p99": 46.216809616089066,
+            "max": 100.0
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.20590696328863464,
+            "median": 0.0,
+            "p95": 0.39215850830078125,
+            "p99": 5.9098052978516264,
+            "max": 28.235294342041016
+          },
+          "prediction_interior_jump": {
+            "mean": 0.5619569430275569,
+            "median": 0.0,
+            "p95": 2.13893756866455,
+            "p99": 9.961088752746607,
+            "max": 40.52734375
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 5.582449924527553,
+            "median": 0.011341094970703125,
+            "p95": 30.132483291625952,
+            "p99": 96.484375,
+            "max": 100.0
+          }
+        }
+      }
+    },
+    "right_o6": {
+      "execution_horizon_16": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "error_abs_distribution": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "mean_valid_dimension_correlation": null,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "prediction_interior_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "execution_horizon_3": {
+        "metrics": {
+          "frames": 1199,
+          "dimensions": 6,
+          "mae": 0.0,
+          "rmse": 0.0,
+          "error_abs_distribution": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "mean_valid_dimension_correlation": null,
+          "per_dimension": {
+            "thumb_cmc_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "thumb_cmc_yaw": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "index_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "middle_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "ring_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            },
+            "pinky_mcp_pitch": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "max_absolute_error": 0.0,
+              "correlation": null,
+              "gt_range": [
+                0.0,
+                0.0
+              ],
+              "prediction_range": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "continuity": {
+          "prediction_chunk_boundary_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "ground_truth_at_same_boundary_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "prediction_interior_jump": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "absolute_error_at_chunk_start": {
+            "mean": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          }
+        }
+      }
+    }
+  }
+}

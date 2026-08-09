@@ -1,0 +1,776 @@
+{
+  "status": "PASS",
+  "source_dataset": "/home/slxy/g1_data/g1_wuji_pilot_20260803_170036",
+  "output_root": "/home/slxy/\u4e0b\u8f7d/g1_o6_gr00t/datasets_corrected_v1",
+  "contracts": {
+    "source_g1": "body_q and last_action are hardware-ordered absolute radians before export; conversion performs no reorder, offset, or scale",
+    "state": {
+      "shape": [
+        32
+      ],
+      "left_arm": [
+        0,
+        7
+      ],
+      "right_arm": [
+        7,
+        14
+      ],
+      "left_o6": [
+        14,
+        20
+      ],
+      "right_o6": [
+        20,
+        26
+      ],
+      "waist": [
+        26,
+        29
+      ],
+      "projected_gravity": [
+        29,
+        32
+      ]
+    },
+    "action": {
+      "per_step_shape": [
+        26
+      ],
+      "chunk_shape": [
+        16,
+        26
+      ],
+      "left_arm": [
+        0,
+        7
+      ],
+      "right_arm": [
+        7,
+        14
+      ],
+      "left_o6": [
+        14,
+        20
+      ],
+      "right_o6": [
+        20,
+        26
+      ]
+    },
+    "arm_representation": "RELATIVE/NON_EEF processor over absolute-radian parquet targets",
+    "o6_representation": "ABSOLUTE/NON_EEF, percentage range 0..100",
+    "waist_and_gravity": "input-only; no waist or leg action output",
+    "image": "ego_view RGB, HWC 480x640x3, 30 fps"
+  },
+  "split_integrity": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "validation": [
+      26,
+      27
+    ],
+    "test": [
+      28,
+      29
+    ],
+    "disjoint": true,
+    "covers_source_episodes_0_through_29": true,
+    "smoke_is_train_subset": true
+  },
+  "splits": {
+    "smoke_2": {
+      "source_episodes": [
+        0,
+        1
+      ],
+      "episodes": 2,
+      "frames": 1048,
+      "all_values_finite": true,
+      "timestamps_strictly_increasing": true,
+      "source_to_corrected_state_action_exact": true,
+      "video_source_hashes_exact": true,
+      "video_contract": "H264 640x480 at 30 fps; frame count equals parquet rows",
+      "video_records": [
+        {
+          "local_episode": 0,
+          "sha256": "c206a667fbf56ec99444be2b9a0feb491fcfd6a075e6775fe661aabfeba10ab0",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 590
+        },
+        {
+          "local_episode": 1,
+          "sha256": "998586f70d468b6fd84c3ef5b85b40902b9de431c0c224d592dabfb3492ec500",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 458
+        }
+      ],
+      "joint_limits": {
+        "all_arm_state_action_and_waist_state_inside": true
+      },
+      "projected_gravity_norm": {
+        "min": 0.9999999403953552,
+        "max": 1.0
+      },
+      "o6": {
+        "left_valid_rate": 1.0,
+        "right_valid_rate": 0.0,
+        "left_state_minmax": [
+          0.0,
+          99.60784149169922
+        ],
+        "left_action_minmax": [
+          0.0,
+          100.0
+        ],
+        "right_state_unique": [
+          0.0
+        ],
+        "right_action_unique": [
+          0.0
+        ]
+      },
+      "stats_independent_recompute_max_abs_error": {
+        "observation.state": 0.0,
+        "action": 0.0,
+        "timestamp": 0.0,
+        "next.reward": 0.0
+      },
+      "relative_stats_independent_recompute_max_abs_error": {
+        "left_arm": 0.0,
+        "right_arm": 0.0
+      },
+      "relative_stats_shapes": {
+        "left_arm": [
+          16,
+          7
+        ],
+        "right_arm": [
+          16,
+          7
+        ]
+      }
+    },
+    "train_26": {
+      "source_episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "episodes": 26,
+      "frames": 13112,
+      "all_values_finite": true,
+      "timestamps_strictly_increasing": true,
+      "source_to_corrected_state_action_exact": true,
+      "video_source_hashes_exact": true,
+      "video_contract": "H264 640x480 at 30 fps; frame count equals parquet rows",
+      "video_records": [
+        {
+          "local_episode": 0,
+          "sha256": "c206a667fbf56ec99444be2b9a0feb491fcfd6a075e6775fe661aabfeba10ab0",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 590
+        },
+        {
+          "local_episode": 1,
+          "sha256": "998586f70d468b6fd84c3ef5b85b40902b9de431c0c224d592dabfb3492ec500",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 458
+        },
+        {
+          "local_episode": 2,
+          "sha256": "ee8636eba99924704df5d9de925935b4eaebe9081ecee9357a6dd34da5f3e9be",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 507
+        },
+        {
+          "local_episode": 3,
+          "sha256": "7bb2706ba4fd76bc6e0c028057dfcb21a2ba2b92488fe2ca906e2ec03bf5cff6",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 612
+        },
+        {
+          "local_episode": 4,
+          "sha256": "2f4e862530588f752c1fdbf6a403375228c787dfe4dac0cc02f32249f08a09f9",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 514
+        },
+        {
+          "local_episode": 5,
+          "sha256": "3139b1d5b9d88c026c6afcda76a96460337e9ea4154754f438044734513d0f4e",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 545
+        },
+        {
+          "local_episode": 6,
+          "sha256": "e04b3970b503085afc460d9dc72f2c6e8857c3ed244d854b4c0103ab63f2f9aa",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 463
+        },
+        {
+          "local_episode": 7,
+          "sha256": "0e3d06f0454290d2e3efe935376baf9f41c94ab036a6f93f69c5e579f6b63936",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 514
+        },
+        {
+          "local_episode": 8,
+          "sha256": "118dce9d3237ff901d068281f16c0cde07d6a3d10775820ccae82c7ed6eb2cb8",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 578
+        },
+        {
+          "local_episode": 9,
+          "sha256": "6c4ab07ac239f57750961ea7eaa32ee4d0eaf2f089d49fc4a1dfb601308cbe6a",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 525
+        },
+        {
+          "local_episode": 10,
+          "sha256": "663b689cca7bcbe618224face87f9b4406c2b22b2ede6414dac6e26b291186fb",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 549
+        },
+        {
+          "local_episode": 11,
+          "sha256": "e90b8687c7b8a348cf797c30b9ae2f979c2ea242af974dcc21b84518be773f17",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 477
+        },
+        {
+          "local_episode": 12,
+          "sha256": "5821695890d12e5c826c12006c3e46ff1986c8cd84246019949e3d9f8a34bade",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 478
+        },
+        {
+          "local_episode": 13,
+          "sha256": "b732c73da2f3c7dfdc79472b1bf6ce1c847bbe74eec26f58a71b446342e41087",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 460
+        },
+        {
+          "local_episode": 14,
+          "sha256": "4b0eae4dccfd812c94bac733088075dfc5317ba0d1ff47608b08342780072e83",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 432
+        },
+        {
+          "local_episode": 15,
+          "sha256": "47c410a99f3f95c4bfd423903721580afe04bd6bc251a66b3e70067e8de39dcd",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 505
+        },
+        {
+          "local_episode": 16,
+          "sha256": "2bec571dfdaab2118f7e0189cc5bfa6a53da151af37138e75320b03910043f79",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 422
+        },
+        {
+          "local_episode": 17,
+          "sha256": "3df0538608bc8ad1038ce8726d2325cefabc61157fd5cfa71d6d1cbf2d98c0ad",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 510
+        },
+        {
+          "local_episode": 18,
+          "sha256": "402aba85420a41cbb50c914299c59092922ddee88e8497615d15bba091090110",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 521
+        },
+        {
+          "local_episode": 19,
+          "sha256": "171e8c88df63f354cd75cd3b1d838f66be3d640b60756459c82df3d5d3305c56",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 498
+        },
+        {
+          "local_episode": 20,
+          "sha256": "4b329872d85bfe8fe4731cb049b955d8e2d20fb00b183b75c99802358a4e93ed",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 491
+        },
+        {
+          "local_episode": 21,
+          "sha256": "5df4fcbdb1af0d5a8030fec08d1dbea58d663c9d797b382b8e40be2693ff0493",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 480
+        },
+        {
+          "local_episode": 22,
+          "sha256": "5b68bf369e137983d2363c388087c0c508efc3098c6ab55b550220c1f9d28cbb",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 413
+        },
+        {
+          "local_episode": 23,
+          "sha256": "9c2f45c84716ce96e1c3c4d1fc9b5ebea1998b854cdec86760ee7f8853128f05",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 484
+        },
+        {
+          "local_episode": 24,
+          "sha256": "c80942055dad4cbc3c190847ac51612fe70f9e19fa1019f06530bb4794cdaf32",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 416
+        },
+        {
+          "local_episode": 25,
+          "sha256": "9750c4fe2370f53ce8c481ab0f83e81ed8309589cf7b9f133ed997d022a1744b",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 670
+        }
+      ],
+      "joint_limits": {
+        "all_arm_state_action_and_waist_state_inside": true
+      },
+      "projected_gravity_norm": {
+        "min": 0.9999999403953552,
+        "max": 1.0
+      },
+      "o6": {
+        "left_valid_rate": 1.0,
+        "right_valid_rate": 0.0,
+        "left_state_minmax": [
+          0.0,
+          99.60784149169922
+        ],
+        "left_action_minmax": [
+          0.0,
+          100.0
+        ],
+        "right_state_unique": [
+          0.0
+        ],
+        "right_action_unique": [
+          0.0
+        ]
+      },
+      "stats_independent_recompute_max_abs_error": {
+        "observation.state": 0.0,
+        "action": 0.0,
+        "timestamp": 0.0,
+        "next.reward": 0.0
+      },
+      "relative_stats_independent_recompute_max_abs_error": {
+        "left_arm": 0.0,
+        "right_arm": 0.0
+      },
+      "relative_stats_shapes": {
+        "left_arm": [
+          16,
+          7
+        ],
+        "right_arm": [
+          16,
+          7
+        ]
+      }
+    },
+    "val_2": {
+      "source_episodes": [
+        26,
+        27
+      ],
+      "episodes": 2,
+      "frames": 1197,
+      "all_values_finite": true,
+      "timestamps_strictly_increasing": true,
+      "source_to_corrected_state_action_exact": true,
+      "video_source_hashes_exact": true,
+      "video_contract": "H264 640x480 at 30 fps; frame count equals parquet rows",
+      "video_records": [
+        {
+          "local_episode": 0,
+          "sha256": "4252b57d19ef1316051a29687ef6994744a20f6b0c71c28b9abcc1182f941a76",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 604
+        },
+        {
+          "local_episode": 1,
+          "sha256": "6394531ae54ad8857c50f6e03665a041ccdbe025c570d2aecfe823b58d23d358",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 593
+        }
+      ],
+      "joint_limits": {
+        "all_arm_state_action_and_waist_state_inside": true
+      },
+      "projected_gravity_norm": {
+        "min": 0.9999999403953552,
+        "max": 1.0
+      },
+      "o6": {
+        "left_valid_rate": 1.0,
+        "right_valid_rate": 0.0,
+        "left_state_minmax": [
+          18.823530197143555,
+          99.60784149169922
+        ],
+        "left_action_minmax": [
+          0.0,
+          100.0
+        ],
+        "right_state_unique": [
+          0.0
+        ],
+        "right_action_unique": [
+          0.0
+        ]
+      },
+      "stats_independent_recompute_max_abs_error": {
+        "observation.state": 0.0,
+        "action": 0.0,
+        "timestamp": 0.0,
+        "next.reward": 0.0
+      },
+      "relative_stats_independent_recompute_max_abs_error": {
+        "left_arm": 0.0,
+        "right_arm": 0.0
+      },
+      "relative_stats_shapes": {
+        "left_arm": [
+          16,
+          7
+        ],
+        "right_arm": [
+          16,
+          7
+        ]
+      }
+    },
+    "test_2": {
+      "source_episodes": [
+        28,
+        29
+      ],
+      "episodes": 2,
+      "frames": 1199,
+      "all_values_finite": true,
+      "timestamps_strictly_increasing": true,
+      "source_to_corrected_state_action_exact": true,
+      "video_source_hashes_exact": true,
+      "video_contract": "H264 640x480 at 30 fps; frame count equals parquet rows",
+      "video_records": [
+        {
+          "local_episode": 0,
+          "sha256": "a6f1bfb4d7ffa149fd658101b961df02521a2fefa06593da7f0a3b26edd87177",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 595
+        },
+        {
+          "local_episode": 1,
+          "sha256": "014d3a0415fa3857c437636a526c423fa546cfb3f5d118930a5fe3aa3cd312ed",
+          "codec": "h264",
+          "pixel_format": "yuv420p",
+          "width": 640,
+          "height": 480,
+          "fps": 30.0,
+          "frames": 604
+        }
+      ],
+      "joint_limits": {
+        "all_arm_state_action_and_waist_state_inside": true
+      },
+      "projected_gravity_norm": {
+        "min": 0.9999999403953552,
+        "max": 1.0
+      },
+      "o6": {
+        "left_valid_rate": 1.0,
+        "right_valid_rate": 0.0,
+        "left_state_minmax": [
+          20.784313201904297,
+          99.60784149169922
+        ],
+        "left_action_minmax": [
+          0.0,
+          100.0
+        ],
+        "right_state_unique": [
+          0.0
+        ],
+        "right_action_unique": [
+          0.0
+        ]
+      },
+      "stats_independent_recompute_max_abs_error": {
+        "observation.state": 0.0,
+        "action": 0.0,
+        "timestamp": 0.0,
+        "next.reward": 0.0
+      },
+      "relative_stats_independent_recompute_max_abs_error": {
+        "left_arm": 0.0,
+        "right_arm": 0.0
+      },
+      "relative_stats_shapes": {
+        "left_arm": [
+          16,
+          7
+        ],
+        "right_arm": [
+          16,
+          7
+        ]
+      }
+    }
+  },
+  "warnings": [
+    "Right O6 feedback/action are all zero and right_hand_valid is always false. Training is valid for both arms and left O6, but cannot teach right O6 behavior.",
+    "Some source episodes include post-success manual reset tails; they remain untrimmed."
+  ],
+  "official_loader": {
+    "status": "PASS",
+    "episodes": 26,
+    "state_group_dims": {
+      "left_arm": 7,
+      "right_arm": 7,
+      "left_o6": 6,
+      "right_o6": 6,
+      "waist": 3,
+      "projected_gravity": 3
+    },
+    "action_group_dims": {
+      "left_arm": 7,
+      "right_arm": 7,
+      "left_o6": 6,
+      "right_o6": 6
+    },
+    "relative_action_groups": [
+      "left_arm",
+      "right_arm"
+    ],
+    "action_horizon": 16
+  },
+  "normalization_processor": {
+    "status": "PASS",
+    "use_percentiles": true,
+    "clip_outliers": true,
+    "use_relative_action": true,
+    "semantic_state_shape": [
+      1,
+      32
+    ],
+    "semantic_action_shape": [
+      16,
+      26
+    ],
+    "normalized_state_range": [
+      -1.0,
+      1.0
+    ],
+    "normalized_action_range": [
+      -0.7052984724008315,
+      1.0
+    ],
+    "all_finite": true,
+    "right_o6_constant_zero_normalizes_to": [
+      0.0
+    ],
+    "n1d7_model_padding": {
+      "state": [
+        1,
+        132
+      ],
+      "action": [
+        40,
+        132
+      ],
+      "action_mask_valid_elements": 416
+    },
+    "full_processor_sample_observed": {
+      "state": [
+        1,
+        132
+      ],
+      "action": [
+        40,
+        132
+      ],
+      "action_mask": [
+        40,
+        132
+      ],
+      "transformed_ego_view": [
+        3,
+        256,
+        340
+      ]
+    }
+  }
+}

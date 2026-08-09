@@ -1,0 +1,26 @@
+{
+  "upstream_sdk_native_range": [0, 255],
+  "training_feedback_range": [0.0, 100.0],
+  "training_command_range": [0.0, 100.0],
+  "joint_order": [
+    "thumb_cmc_pitch",
+    "thumb_cmc_yaw",
+    "index_mcp_pitch",
+    "middle_mcp_pitch",
+    "ring_mcp_pitch",
+    "pinky_mcp_pitch"
+  ],
+  "forward_mapping": "percent = raw_255 * 100 / 255",
+  "inverse_mapping": "raw_255 = percent * 255 / 100; exact integer rounding remains to be copied from remote helper",
+  "empirical_evidence": {
+    "dataset": "/home/slxy/g1_data/g1_wuji_pilot_20260803_170036",
+    "episodes": 30,
+    "left_feedback_unique_values": 249,
+    "left_command_unique_values": 255,
+    "feedback_max_integer_raw_residual": 9.5367431640625e-06,
+    "command_max_integer_raw_residual": 9.5367431640625e-06,
+    "right_feedback_and_command_degenerate_zero": true
+  },
+  "live_shadow_command_socket_created": false,
+  "live_shadow_real_o6_sdk_imported": false
+}

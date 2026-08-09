@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "obsolete": [
+    {
+      "plan": "deployment/logs/real_bridge_preflight/20260805_183612/micro_motion_plan.json",
+      "plan_sha256": "c909fc15b7ce3c7699b18b9e066c271cf7d403696c8a7022412628279f05e814",
+      "token": "deployment/logs/real_bridge_preflight/20260805_183612/arming_token.json",
+      "token_bound_sha256": "aa1c1b07de48fef4145e56f906cd5311ede1a804acf281ef8d6f22e8f883978a",
+      "reason": "predates corrected checkpoint-3000 and right-O6 feedback-only policy",
+      "may_execute": false
+    },
+    {
+      "plan": "deployment/logs/real_bridge_preflight_corrected/20260807_150000/model_micro_motion_plan.json",
+      "plan_sha256": "6e6bac68da90a5e7db6fcbc6cabb85d8760cd0d4fd6afd2332ccdee2d52c45b9",
+      "token": null,
+      "token_bound_sha256": null,
+      "reason": "predates arm/O6 scheduler decoupling and scheduler-fixed Hold pass",
+      "may_execute": false
+    },
+    {
+      "plan": "deployment/logs/real_bridge_preflight_corrected/20260807_161056_scheduler_fixed/model_micro_motion_plan.json",
+      "plan_sha256": "82b52e6989b4659cc538eacb3181e51fe90ef75dd6ab29647af58461408672b3",
+      "token": "deployment/logs/real_bridge_preflight_corrected/20260807_161056_scheduler_fixed/token.json.consumed",
+      "token_bound_sha256": "05c20259e968a5d26d3bd4e598fd16a1581c3360349cc82568eb22b68d7bc032",
+      "reason": "micro plan predates complete arm/O6 I/O decoupling; associated token was hold-only and is consumed",
+      "may_execute": false
+    },
+    {
+      "plan": "deployment/logs/real_bridge_preflight_corrected/20260807_163021_micro_decoupled/model_micro_motion_plan.json",
+      "plan_sha256": "c262f7f66cc62f0b851de72c1fdc8a088445560526989f7cbaf5d33c9652b96d",
+      "token": null,
+      "token_bound_sha256": null,
+      "reason": "superseded by the first-deployment arms-only plan with bilateral O6 feedback-only",
+      "may_execute": false
+    },
+    {
+      "plan": "deployment/logs/real_bridge_preflight_corrected/20260807_164943_arms_only/source_combined_preview_not_authorized.json",
+      "plan_sha256": "7eb417806c976e921c6ffa4eb6345c31a05c226ecfcab5b4e304a26fc1bf5e5e",
+      "token": null,
+      "token_bound_sha256": null,
+      "reason": "intermediate combined preview; first nonzero deployment is arms-only",
+      "may_execute": false
+    }
+  ]
+}

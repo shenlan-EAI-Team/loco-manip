@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "PASS_READ_ONLY_NULL_SINK",
+  "checkpoint": "/home/slxy/下载/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000",
+  "run_summary": "deployment/logs/live_shadow_host/20260807_145612/20260807_145614_A/summary.json",
+  "run_jsonl": "deployment/logs/live_shadow_host/20260807_145612/20260807_145614_A/live_shadow.jsonl",
+  "duration_s": 30,
+  "warmup_inferences": 10,
+  "inferences": 300,
+  "effective_inference_hz": 10.0,
+  "deadline_misses": 1,
+  "deadline_miss_ratio": 0.0033333333333333335,
+  "synchronized_observations": 657,
+  "cross_modal_skew_rejections": 84,
+  "failure": null,
+  "null_sink_records": 3000,
+  "command_publish_attempts": 0,
+  "control_ownership_requests": 0,
+  "real_sdk_command_objects_created": 0,
+  "right_o6_command_count": 0,
+  "arm_filter_rates": {
+    "old": {
+      "left": {"velocity": 0.8781349206, "acceleration": 0.9415476190},
+      "right": {"velocity": 0.914246, "acceleration": 0.941032}
+    },
+    "corrected": {
+      "left": {"velocity": 0.4896825397, "acceleration": 0.8887301587},
+      "right": {"velocity": 0.1953968254, "acceleration": 0.7853968254}
+    }
+  },
+  "left_o6_spikes": {
+    "raw_adjacent_ratio_gt_30": 0.0025954765,
+    "raw_chunk_boundary_ratio_gt_30": 0.0066889632,
+    "raw_max_jump_points": 58.203125,
+    "rejected_scalar_count": 18,
+    "final_ratio_gt_30": 0.0,
+    "final_max_jump_points": 0.5
+  },
+  "plans": {
+    "hold_only": "deployment/logs/real_bridge_preflight_corrected/20260807_150000/hold_only_plan.json",
+    "hold_only_sha256": "0925c754b928c28123b9cc95b5b3f0b2a725d17a31771bf01f404c2d278fa88e",
+    "model_micro": "deployment/logs/real_bridge_preflight_corrected/20260807_150000/model_micro_motion_plan.json",
+    "model_micro_sha256": "6e6bac68da90a5e7db6fcbc6cabb85d8760cd0d4fd6afd2332ccdee2d52c45b9",
+    "confirmation_token": null,
+    "real_commands_sent": 0
+  }
+}

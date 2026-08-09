@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "timestamp": "2026-08-05T17:57:21+08:00",
+  "result": "live_shadow_scenario_a_passed",
+  "gate_passed": true,
+  "scenario": "A",
+  "configuration": {
+    "real_hardware_enabled": false,
+    "publish_commands": false,
+    "shadow_only": true,
+    "dry_run": true,
+    "checkpoint": "outputs/formal_train_26/checkpoint-4000",
+    "denoising_steps": 4,
+    "warmup_inferences": 10,
+    "replanning_hz": 10.0,
+    "execution_horizon": 3,
+    "control_timeline_hz": 30.0,
+    "final_sink": "NullActionSink"
+  },
+  "can": {
+    "left": {"interface": "can2", "o6_serial": "LHO6-03-1097-L-Z-1-E"},
+    "right": {"interface": "can1", "o6_serial": "LHO6-03-1093-R-Z-1-E"},
+    "bitrate": 1000000,
+    "restart_ms": 100,
+    "txqueuelen": 1000,
+    "final_state": "ERROR-ACTIVE",
+    "tx_error": 0,
+    "rx_error": 0,
+    "observed_query_frames": [
+      {"interface": "can2", "can_id": "0x28", "request": "01", "request_dlc": 1},
+      {"interface": "can1", "can_id": "0x27", "request": "01", "request_dlc": 1}
+    ],
+    "position_request_dlc7_observed": false,
+    "unknown_ids_observed": false
+  },
+  "sources": {
+    "camera": {
+      "pid": 6615,
+      "tmux": "lsro_camera_20260805_174318",
+      "port": 5555,
+      "serial": "342522073568",
+      "shape": [480, 640, 3],
+      "dtype": "uint8",
+      "direct_hz": 29.9791,
+      "source": "/home/unitree/GR00T-WholeBodyControl/gear_sonic/camera/composed_camera.py",
+      "sha256": "9161d97f456bd6e1882fde0ffd288013ac57f29164680865e597634370c2e413"
+    },
+    "o6": {
+      "pid": 6762,
+      "tmux": "lsro_o6_20260805_174318",
+      "port": 5558,
+      "schema_version": 2,
+      "feedback_only": true,
+      "direct_hz": 19.9609,
+      "source": "/home/unitree/live_shadow_readonly_20260805_174318/o6_feedback_only_relay.py",
+      "sha256": "d76cb5ef41da41abf305d3b09bd8e2e8dda23c2bc14a11998fe625b7a28a14c8",
+      "control_command_calls": 0,
+      "command_socket_created": false
+    },
+    "dds": {"topic": "rt/lowstate", "interface": "enp4s0", "publisher_created": false}
+  },
+  "synchronization": {
+    "camera_candidates": 2904,
+    "synchronized_observations": 2501,
+    "cross_modal_skew_rejections": 403,
+    "stale_rejections": 0,
+    "decoder_rejections": 0,
+    "skew_ms": {"mean": 6.4537, "p95": 18.0263, "p99": 19.4883, "max": 19.9600}
+  },
+  "runtime": {
+    "requested_duration_s": 120,
+    "actual_warmup_inferences": 10,
+    "inferences": 1200,
+    "null_sink_records": 12000,
+    "deadline_misses": 2,
+    "deadline_miss_ratio": 0.0016666667,
+    "scheduler_periods_skipped": 0,
+    "end_to_end_ms": {"mean": 64.5713, "p99": 77.5504, "max": 161.5909},
+    "command_publish_attempts": 0,
+    "control_ownership_requests": 0,
+    "real_sdk_command_objects_created": 0,
+    "failure": null
+  },
+  "arm_analysis": {
+    "left": {"target_feedback_abs_mean_rad": 0.33832, "target_drift_abs_mean_rad": 0.22232, "feedback_motion_abs_mean_rad": 0.00000856},
+    "right": {"target_feedback_abs_mean_rad": 0.21584, "target_drift_abs_mean_rad": 0.24601, "feedback_motion_abs_mean_rad": 0.00000890},
+    "right_filter_primary_cause": "model chunk jumps under conservative velocity/acceleration limits, not measured feedback motion",
+    "right_velocity_trigger_rate": 0.914246,
+    "right_acceleration_trigger_rate": 0.941032
+  },
+  "o6_analysis": {
+    "physical_feedback_motion_observed": false,
+    "left_raw_target_range": [0, 100],
+    "left_successive_target_drift_abs_mean": 25.4541,
+    "right_raw_output_all_zero_ratio": 1.0,
+    "right_feedback_model_domain_mismatch_points_mean": 99.6732
+  },
+  "cleanup": {
+    "stopped_exact_pids": [6615, 6762],
+    "stopped_tmux_sessions": ["lsro_camera_20260805_174318", "lsro_o6_20260805_174318"],
+    "ports_5555_5558_listening_after": false,
+    "other_robot_processes_stopped": [],
+    "can_left_up": true,
+    "can_right_up": true
+  },
+  "logs": {
+    "run_summary": "deployment/logs/live_shadow_host/20260805_175132/20260805_175134_A/summary.json",
+    "run_jsonl": "deployment/logs/live_shadow_host/20260805_175132/20260805_175134_A/live_shadow.jsonl",
+    "console": "deployment/logs/live_shadow_host_console_20260805_174318_final.log",
+    "remote_sources": "deployment/logs/remote_readonly_sources/live_shadow_readonly_20260805_174318",
+    "executed_commands": "deployment/logs/live_shadow_host/20260805_175132/executed_commands.md"
+  },
+  "next_stage": "offline real-SDK bridge development with publication hard-disabled; no hardware-side command object instantiation or execution authorized"
+}

@@ -1,0 +1,295 @@
+{
+  "test_frame": {
+    "dataset": "/home/slxy/下载/g1_o6_gr00t/datasets_corrected_v1/test_2",
+    "checkpoint": "/home/slxy/下载/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000",
+    "local_episode": 0,
+    "frame": 0,
+    "state_shapes": {
+      "left_arm": [
+        1,
+        7
+      ],
+      "right_arm": [
+        1,
+        7
+      ],
+      "left_o6": [
+        1,
+        6
+      ],
+      "right_o6": [
+        1,
+        6
+      ],
+      "waist": [
+        1,
+        3
+      ],
+      "projected_gravity": [
+        1,
+        3
+      ]
+    }
+  },
+  "groups": {
+    "left_arm": {
+      "representation": "relative",
+      "type": "non_eef",
+      "public_api": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.17255781590938568,
+        "max": 0.9363518357276917,
+        "mean": 0.19353281352336385,
+        "std": 0.31377783515619756,
+        "finite": true
+      },
+      "model_normalized": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.73828125,
+        "max": 0.26953125,
+        "mean": -0.14853668212890625,
+        "std": 0.25200905370862653,
+        "finite": true
+      },
+      "denormalized_before_relative": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.2347034412669018,
+        "max": 0.21565139520680532,
+        "mean": -0.026355456746711883,
+        "std": 0.11628214143593377,
+        "finite": true
+      },
+      "manual_decode_equals_public": true,
+      "max_manual_public_difference": 2.8405338525772095e-08,
+      "current_state": {
+        "shape": [
+          1,
+          1,
+          7
+        ],
+        "min": -0.17864884436130524,
+        "max": 1.0287498235702515,
+        "mean": 0.21988827096564428,
+        "std": 0.3552276990107266,
+        "finite": true
+      },
+      "public_minus_current": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.2347034215927124,
+        "max": 0.21565140783786774,
+        "mean": -0.026355457342495874,
+        "std": 0.11628214073741427,
+        "finite": true
+      },
+      "public_minus_current_equals_denormalized_relative": true
+    },
+    "right_arm": {
+      "representation": "relative",
+      "type": "non_eef",
+      "public_api": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.38061270117759705,
+        "max": 1.179398775100708,
+        "mean": 0.1548623992992881,
+        "std": 0.44300025734672976,
+        "finite": true
+      },
+      "model_normalized": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.2109375,
+        "max": 0.4375,
+        "mean": 0.18703351702008927,
+        "std": 0.16115608065025258,
+        "finite": true
+      },
+      "denormalized_before_relative": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.15981532912701368,
+        "max": 0.027570412217755802,
+        "mean": -0.037773741723055664,
+        "std": 0.054965758218469524,
+        "finite": true
+      },
+      "manual_decode_equals_public": true,
+      "max_manual_public_difference": 5.51808625459671e-08,
+      "current_state": {
+        "shape": [
+          1,
+          1,
+          7
+        ],
+        "min": -0.2207973599433899,
+        "max": 1.2172616720199585,
+        "mean": 0.19263614170735568,
+        "std": 0.4316847817184053,
+        "finite": true
+      },
+      "public_minus_current": {
+        "shape": [
+          1,
+          16,
+          7
+        ],
+        "min": -0.15981534123420715,
+        "max": 0.027570411562919617,
+        "mean": -0.037773742394555096,
+        "std": 0.054965757490642655,
+        "finite": true
+      },
+      "public_minus_current_equals_denormalized_relative": true
+    },
+    "left_o6": {
+      "representation": "absolute",
+      "type": "non_eef",
+      "public_api": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": 72.4609375,
+        "max": 100.0,
+        "mean": 95.45692507425944,
+        "std": 10.011547669939603,
+        "finite": true
+      },
+      "model_normalized": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": 0.48046875,
+        "max": 1.1015625,
+        "mean": 0.9503173828125,
+        "std": 0.2032249033832856,
+        "finite": true
+      },
+      "denormalized_before_relative": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": 72.46093926206231,
+        "max": 100.0,
+        "mean": 95.45692495452086,
+        "std": 10.011547811218348,
+        "finite": true
+      },
+      "manual_decode_equals_public": true,
+      "max_manual_public_difference": 3.594905138015747e-06,
+      "public_equals_denormalized_absolute": true
+    },
+    "right_o6": {
+      "representation": "absolute",
+      "type": "non_eef",
+      "public_api": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "finite": true
+      },
+      "model_normalized": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": -0.03515625,
+        "max": 0.03955078125,
+        "mean": 0.0029627482096354165,
+        "std": 0.01796608192537124,
+        "finite": true
+      },
+      "denormalized_before_relative": {
+        "shape": [
+          1,
+          16,
+          6
+        ],
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "finite": true
+      },
+      "manual_decode_equals_public": true,
+      "max_manual_public_difference": 0.0,
+      "public_equals_denormalized_absolute": true
+    }
+  },
+  "all_manual_decode_equals_public": true,
+  "policy_client_payload_unchanged": true,
+  "policy_client_info": {
+    "mocked_local_transport": true
+  },
+  "duplicate_transform_scan_hits": [],
+  "adapter_contract": {
+    "input_is_physical_units": true,
+    "adapter_must_denormalize": false,
+    "adapter_must_add_q_current": false,
+    "arm_unit": "rad absolute joint target",
+    "o6_unit": "0-100 absolute command"
+  },
+  "code_locations": {
+    "Gr00tPolicy._get_action": {
+      "path": "/home/slxy/下载/Isaac-GR00T/gr00t/policy/gr00t_policy.py",
+      "function": "Gr00tPolicy._get_action",
+      "start_line": 380,
+      "end_line": 432
+    },
+    "processor.decode_action": {
+      "path": "/home/slxy/下载/Isaac-GR00T/gr00t/model/gr00t_n1d7/processing_gr00t_n1d7.py",
+      "function": "Gr00tN1d7Processor.decode_action",
+      "start_line": 382,
+      "end_line": 404
+    },
+    "StateActionProcessor.unapply_action": {
+      "path": "/home/slxy/下载/Isaac-GR00T/gr00t/data/state_action/state_action_processor.py",
+      "function": "StateActionProcessor.unapply_action",
+      "start_line": 421,
+      "end_line": 526
+    },
+    "PolicyClient._get_action": {
+      "path": "/home/slxy/下载/Isaac-GR00T/gr00t/policy/server_client.py",
+      "function": "PolicyClient._get_action",
+      "start_line": 387,
+      "end_line": 393
+    }
+  }
+}

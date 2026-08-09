@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-08-07T16:52:28+08:00",
+  "status": "EXECUTED_ONCE_SAFE_COMPLETION_NO_MEASURABLE_ARM_RESPONSE",
+  "checkpoint": "/home/slxy/下载/g1_o6_gr00t/outputs/formal_train_26_corrected_v1/checkpoint-3000",
+  "plan": {
+    "path": "deployment/logs/real_bridge_preflight_corrected/20260807_164943_arms_only/arms_only_micro_motion_plan.json",
+    "sha256": "6010d7293ab6805ab8f2e7ded813d69859cd4a2190f2ac1f37ffdb6c935190ee",
+    "duration_s": 0.5,
+    "automatic_repeat": false,
+    "left_arm_max_abs_offset_rad": 0.010000000000000009,
+    "right_arm_max_abs_offset_rad": 0.010000000000000009,
+    "outer_startup_envelope_rad": 0.03,
+    "effective_first_run_envelope_rad": 0.01,
+    "max_velocity_rad_s": 0.12,
+    "max_acceleration_rad_s2": 0.4
+  },
+  "command_scope": {
+    "g1_left_arm": true,
+    "g1_right_arm": true,
+    "left_o6_feedback_only": true,
+    "left_o6_position_command_count": 0,
+    "right_o6_feedback_only": true,
+    "right_o6_position_command_count": 0,
+    "waist_leg_command_count": 0
+  },
+  "release": {
+    "duration_s": 2.0,
+    "messages": 100,
+    "final_weight": 0.0,
+    "post_release_read_only_monitor_s": 0.5
+  },
+  "token": {
+    "path": "deployment/logs/real_bridge_preflight_corrected/20260807_164943_arms_only/arms_only_token.json",
+    "bound_plan_sha256_matches": true,
+    "consumed": true,
+    "expires_local": "2026-08-08T16:49:43.554764+08:00",
+    "file_mode": "0600"
+  },
+  "verification": {
+    "focused_tests_passed": 31,
+    "focused_tests_failed": 0,
+    "static_safety_audit_passed": true,
+    "obsolete_plan_hashes_rejected": 5,
+    "real_commands_sent": 276,
+    "real_transport_created": true
+  },
+  "execution": {
+    "log": "deployment/logs/real_micro/20260807_165900_arms_only/arms_only.jsonl",
+    "summary": "deployment/logs/real_micro/20260807_165900_arms_only/summary.json",
+    "safe_execution_and_release_passed": true,
+    "controlled_micro_response_proven": false,
+    "maximum_feedback_offset_rad": 0.00004793703556060791,
+    "faults": 0,
+    "watchdogs": 0,
+    "left_o6_position_command_count": 0,
+    "right_o6_position_command_count": 0,
+    "waist_leg_command_count": 0,
+    "final_weight": 0.0,
+    "automatic_repeat_executed": false
+  }
+}

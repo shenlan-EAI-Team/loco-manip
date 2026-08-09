@@ -1,0 +1,65 @@
+schema_version: 1
+
+# All three gates remain false in the checked-in/default configuration.
+hardware_transport_enabled: false
+command_publication_enabled: false
+micro_motion_armed: false
+
+network:
+  g1_host: 192.168.123.164
+  ssh_user: unitree
+  g1_dds_interface: enp4s0
+  o6_feedback_reader_python: /home/slxy/下载/Isaac-GR00T/.venv/bin/python
+  o6_remote_python: /usr/bin/python3
+  o6_remote_agent: /home/unitree/g1_o6_real_bridge_corrected_20260807/remote_o6_agent.py
+  o6_remote_agent_sha256: 4aaa152f46855cb2b765e5f4e41f2ec30a6c733a988ae69a28f25e003eb93940
+
+g1:
+  command_topic: rt/arm_sdk
+  feedback_topic: rt/lowstate
+  left_arm_indices: [15, 16, 17, 18, 19, 20, 21]
+  right_arm_indices: [22, 23, 24, 25, 26, 27, 28]
+  weight_index: 29
+  forbidden_indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  kp: 60.0
+  kd: 1.5
+  dq: 0.0
+  tau_ff: 0.0
+  sdk_publish_hz: 50.0
+  activation_ramp_s: 1.0
+  release_ramp_s: 2.0
+
+o6:
+  left_can: can2
+  right_can: can1
+  right_o6_feedback_only: true
+  right_o6_command_count_required: 0
+  sdk_order: [thumb_cmc_pitch, thumb_cmc_yaw, index_mcp_pitch, middle_mcp_pitch, ring_mcp_pitch, pinky_mcp_pitch]
+  publish_hz: 30.0
+  integer_mapping: "int(round(percent * 255.0 / 100.0))"
+  position_call: LinkerHandO6Can.try_set_joint_positions
+  forbidden_calls: [set_speed, set_torque, set_enable, reset, home, homing, calibrate]
+
+micro_motion:
+  full_weight_hold_s: 2.0
+  model_window_s: 0.5
+  policy_hz: 10.0
+  control_timeline_hz: 30.0
+  arm_max_excursion_rad: 0.01
+  arm_max_velocity_rad_s: 0.12
+  arm_max_acceleration_rad_s2: 0.4
+  o6_max_excursion_points: 5.0
+  o6_max_velocity_points_s: 15.0
+  hold_arm_abort_delta_rad: 0.01
+  hold_o6_abort_delta_points: 2.0
+  feedback_stale_timeout_ms: 200.0
+  scheduler_max_lateness_ms: 40.0
+  right_o6_zero_clamp_max_consecutive_policy_frames: 5
+  release_max_arm_rebound_rad: 0.01
+  post_release_monitor_s: 0.5
+
+stop:
+  g1: "retain the last safe arm target while linearly ramping arm_sdk weight to 0"
+  o6: "stop position publication and close receive thread/bus handle; do not call api.close_can()"
+  sends_zero_posture: false
+  changes_motion_mode: false
