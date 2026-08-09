@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "base_manifest": "g1_wbc_commissioning_manifest.json",
+  "proof_contract": {
+    "joint_name": "left_wrist_yaw_joint",
+    "motor_cmd_index": 21,
+    "motor_state_index": 21,
+    "offset_rad": 0.01,
+    "other_arm_motor_indices_frozen": [15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28],
+    "lower_body_motor_indices_from_gear_wbc": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  },
+  "sha256": {
+    "decoupled_wbc/control/real_safe/lowcmd_guard/single_wrist_proof.py": "ed81e36d21d77e409c908cd7e5e0bb181032b9ece6474ee6c3b700be499eb203",
+    "decoupled_wbc/control/main/teleop/run_g1_single_wrist_proof.py": "1d8009e1d6679e0d8f3691a2e15f45f28095819748d613f2333dc2f20dc4418f",
+    "decoupled_wbc/control/main/teleop/configs/g1_single_wrist_proof.json": "9845128f66c1f191237dad073637376bd2f7159a934cc0ebcfe130463d73aad6",
+    "decoupled_wbc/control/main/teleop/configs/g1_wbc_commissioning_manifest.json": "8538b6833ec5710274008f77462032822085f8e2d4eb1a8540ce5fa70bcb0bb6"
+  }
+}

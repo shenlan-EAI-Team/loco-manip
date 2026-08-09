@@ -1,0 +1,43 @@
+schema_version: 1
+control_frequency_hz: 50.0
+
+# G1 29DoF motor order: left leg, right leg, waist, left arm, right arm.
+q_lower: [-2.5307, -0.5236, -2.7576, -0.087267, -0.87267, -0.2618,
+          -2.5307, -2.9671, -2.7576, -0.087267, -0.87267, -0.2618,
+          -2.618, -0.52, -0.52,
+          -3.0892, -1.5882, -2.618, -1.0472, -1.972222054, -1.614429558, -1.614429558,
+          -3.0892, -2.2515, -2.618, -1.0472, -1.972222054, -1.614429558, -1.614429558]
+q_upper: [2.8798, 2.9671, 2.7576, 2.8798, 0.5236, 0.2618,
+          2.8798, 0.5236, 2.7576, 2.8798, 0.5236, 0.2618,
+          2.618, 0.52, 0.52,
+          2.6704, 2.2515, 2.618, 2.0944, 1.972222054, 1.614429558, 1.614429558,
+          2.6704, 1.5882, 2.618, 2.0944, 1.972222054, 1.614429558, 1.614429558]
+
+# Conservative measured-state fault thresholds for the first supported standing test.
+measured_dq_abs_limit: [10, 10, 10, 10, 10, 10,
+                        10, 10, 10, 10, 10, 10,
+                        8, 8, 8,
+                        6, 6, 6, 6, 6, 6, 6,
+                        6, 6, 6, 6, 6, 6, 6]
+
+lower_target_rate_abs_limit: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                              0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                              0.3, 0.3, 0.3]
+lower_target_step_abs_limit: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                              0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                              0.006, 0.006, 0.006]
+
+lowstate_stale_s: 0.10
+imu_stale_s: 0.10
+max_control_interval_s: 0.04
+hold_min_duration_s: 2.0
+engage_duration_s: 3.0
+hold_feedback_delta_abs_limit: [0.03, 0.03, 0.03, 0.03, 0.03, 0.03,
+                                0.03, 0.03, 0.03, 0.03, 0.03, 0.03,
+                                0.02, 0.02, 0.02,
+                                0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                                0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
+
+# Intentionally unresolved: no generic kp=0 or process-exit behavior is safe for
+# an unsupported standing robot. A verified platform/support-specific exit is required.
+fault_exit_strategy: UNRESOLVED_REQUIRES_SUPPORTED_PLATFORM_VALIDATION

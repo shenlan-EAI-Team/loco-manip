@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "single_wrist_proof": {
+    "joint_name": "left_wrist_yaw_joint",
+    "motor_cmd_index": 21,
+    "motor_state_index": 21,
+    "offset_rad": 0.01,
+    "ramp_duration_s": 0.5,
+    "hold_duration_s": 1.0,
+    "preview_current_q_rad": 0.03185407072305679,
+    "max_initial_q_deviation_rad": 0.02,
+    "feedback_envelope_rad": 0.015,
+    "reverse_fault_threshold_rad": 0.002,
+    "minimum_success_response_rad": 0.001,
+    "max_abs_feedback_dq_rad_s": 0.25
+  }
+}

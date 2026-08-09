@@ -1,0 +1,62 @@
+schema_version: 1
+
+# Unitree's official G1 low-level examples and this repository's existing
+# g1_deploy_onnx_ref both publish LowCmd every 2 ms. This is a conservative
+# source-backed starting value, not a measured firmware minimum.
+official_reference_transport_frequency_hz: 500.0
+transport_frequency_hz: 500.0
+measured_minimum_transport_frequency_hz: null
+policy_target_frequency_hz: 50.0
+commissioning_wbc_preflight_samples: 10
+lower_body_mailbox_stale_s: 0.10
+commissioning_stand_duration_s: 5.0
+
+required_initial_owner: ai
+hold_duration_s: 2.0
+post_recovery_monitor_s: 2.0
+first_write_deadline_s: 0.005
+release_verify_timeout_s: 0.25
+recovery_verify_timeout_s: 3.0
+pc_heartbeat_timeout_s: 0.10
+command_prepare_max_age_s: 0.02
+
+# These must remain false until the exact LowCmd-to-ai handoff has been
+# validated under physical support on this G1.
+real_execution_enabled: false
+recovery_handoff_verified: false
+commissioning_execution_enabled: false
+
+# G1 29DoF PR control. All actual motors are explicitly enabled only after the
+# lifecycle gates pass. IDL slots 29-34 are explicitly serialized disabled.
+mode_pr: 0
+motor_mode: [1, 1, 1, 1, 1, 1,
+             1, 1, 1, 1, 1, 1,
+             1, 1, 1,
+             1, 1, 1, 1, 1, 1, 1,
+             1, 1, 1, 1, 1, 1, 1]
+
+# Final Decoupled WBC LowCmd gains already used by this project. The lifecycle
+# test sends current q only; it does not ramp toward a different posture.
+kp: [150, 150, 150, 200, 40, 40,
+     150, 150, 150, 200, 40, 40,
+     250, 250, 250,
+     100, 100, 40, 40, 20, 20, 20,
+     100, 100, 40, 40, 20, 20, 20]
+kd: [2, 2, 2, 4, 2, 2,
+     2, 2, 2, 4, 2, 2,
+     5, 5, 5,
+     5, 5, 2, 2, 2, 2, 2,
+     5, 5, 2, 2, 2, 2, 2]
+
+# Future PC targets are independently bounded before entering the 500 Hz
+# mailbox. The first lifecycle test never accepts a non-current-q target.
+target_step_abs_limit: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                        0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                        0.006, 0.006, 0.006,
+                        0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024,
+                        0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024]
+target_rate_abs_limit: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                        0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                        0.3, 0.3, 0.3,
+                        0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12,
+                        0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12]

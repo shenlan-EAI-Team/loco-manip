@@ -1,0 +1,54 @@
+schema_version: 1
+
+official_reference_transport_frequency_hz: 500.0
+transport_frequency_hz: 500.0
+measured_minimum_transport_frequency_hz: null
+policy_target_frequency_hz: 50.0
+commissioning_wbc_preflight_samples: 10
+lower_body_mailbox_stale_s: 0.10
+commissioning_stand_duration_s: 5.0
+
+required_initial_owner: ai
+hold_duration_s: 2.0
+post_recovery_monitor_s: 2.0
+first_write_deadline_s: 0.005
+release_verify_timeout_s: 0.25
+recovery_verify_timeout_s: 3.0
+pc_heartbeat_timeout_s: 0.10
+command_prepare_max_age_s: 0.02
+
+# This named configuration is usable only with wbc-commissioning mode, all
+# three explicit CLI gates, and a one-time token. The normal default config
+# remains fully disabled.
+real_execution_enabled: true
+recovery_handoff_verified: false
+commissioning_execution_enabled: true
+
+mode_pr: 0
+motor_mode: [1, 1, 1, 1, 1, 1,
+             1, 1, 1, 1, 1, 1,
+             1, 1, 1,
+             1, 1, 1, 1, 1, 1, 1,
+             1, 1, 1, 1, 1, 1, 1]
+
+kp: [150, 150, 150, 200, 40, 40,
+     150, 150, 150, 200, 40, 40,
+     250, 250, 250,
+     100, 100, 40, 40, 20, 20, 20,
+     100, 100, 40, 40, 20, 20, 20]
+kd: [2, 2, 2, 4, 2, 2,
+     2, 2, 2, 4, 2, 2,
+     5, 5, 5,
+     5, 5, 2, 2, 2, 2, 2,
+     5, 5, 2, 2, 2, 2, 2]
+
+target_step_abs_limit: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                        0.01, 0.01, 0.01, 0.01, 0.01, 0.01,
+                        0.006, 0.006, 0.006,
+                        0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024,
+                        0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024, 0.0024]
+target_rate_abs_limit: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                        0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                        0.3, 0.3, 0.3,
+                        0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12,
+                        0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12]
